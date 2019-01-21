@@ -7,11 +7,12 @@ using UnityEngine.Windows.Speech;
 
 public class VoiceCommand : MonoBehaviour
 {
-
     public GameObject billboard;
     Pathfinding pathfinding;
     private KeywordRecognizer keywordRecognizer;
     private Dictionary<string, Action> actions = new Dictionary<string, Action>();
+
+    private Manager manager;
 
     public bool pathIsSet = false;
     public bool pathIsMax = false;
@@ -23,15 +24,25 @@ public class VoiceCommand : MonoBehaviour
     private void Awake()
     {
         //pathfinding = GetComponent<Pathfinding>();
+
+        manager = GameObject.FindGameObjectWithTag("GameController").GetComponent<Manager>();
+
+        if (manager != null)
+            Debug.Log("manager found with tag by VoiceCommand");
+
+        else
+            Debug.Log("manager not found with tag by VoiceCommand");
     }
 
     void Start()
     {
-        actions.Add("Max", SetMaxAsPath);
-        actions.Add("Other", SetOtherAsPath);
         actions.Add("milk", SetMilkAsProduct);
         actions.Add("corny", SetCornyAsProduct);
-        
+
+        actions.Add("Start Demo", StartDemo);
+        actions.Add("Dairy Products", SetPathToDairyProducts);
+        actions.Add("Snacks", SetPathToSnacks);
+        actions.Add("Reset Demo", ResetDemo);
 
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += RecognizeSpeech;
@@ -50,17 +61,10 @@ public class VoiceCommand : MonoBehaviour
         pathIsSet = true;
         pathIsMax = true;
     }
-    void SetOtherAsPath()
-    {
-        billboard.GetComponent<TextMesh>().text = "Other";
-        pathIsSet = true;
-    }
 
     void SetMilkAsProduct()
     {
-        billboard.GetComponent<TextMesh>().text = "Milk";
-        prouctIsSet = true;
-        productIsMilk = true;
+        manager.SetMilkAsProduct();
     }
 
     void SetCornyAsProduct()
@@ -69,5 +73,32 @@ public class VoiceCommand : MonoBehaviour
         prouctIsSet = true;
     }
 
+    void StartDemo()
+    {
+        manager.StartDemo();
+    }
 
+    void SetPathToDairyProducts()
+    {
+        manager.SetPathToDairyProducts();
+    }
+
+    void SetPathToSnacks()
+    {
+        manager.SetPathToSnacks();
+    }
+
+    // Resets Manager and Pathfinding Objects with Tag
+    void ResetDemo()
+    {
+        manager.ResetDemo();
+
+        GameObject[] paths = GameObject.FindGameObjectsWithTag("Pathfinding");
+
+        foreach (GameObject path in paths)
+        {
+            path.GetComponent<Pathfinding>().ResetPathfinding();
+            Debug.Log("Path Reset");
+        }
+    }
 }

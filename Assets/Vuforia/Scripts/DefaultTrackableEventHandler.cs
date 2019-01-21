@@ -17,12 +17,13 @@ using Vuforia;
 /// </summary>
 public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandler
 {
+
     #region PROTECTED_MEMBER_VARIABLES
 
     protected TrackableBehaviour mTrackableBehaviour;
     protected TrackableBehaviour.Status m_PreviousStatus;
     protected TrackableBehaviour.Status m_NewStatus;
-
+    
     #endregion // PROTECTED_MEMBER_VARIABLES
 
     #region UNITY_MONOBEHAVIOUR_METHODS
@@ -32,6 +33,14 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
+
+        manager = GameObject.FindGameObjectWithTag("GameController");
+
+        if (manager != null)
+            Debug.Log("manager found with tag by DefaultTrackableEventHandler");
+
+        else
+            Debug.Log("manager not found with tag by DefaultTrackableEventHandler");
     }
 
     protected virtual void OnDestroy()
@@ -83,6 +92,11 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
     protected virtual void OnTrackingFound()
     {
+        if (mTrackableBehaviour.TrackableName == "poster_anchor")
+        {
+            //manager.GetComponent<Manager>().PosterFound();
+        }
+
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
         var canvasComponents = GetComponentsInChildren<Canvas>(true);
