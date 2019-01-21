@@ -11,18 +11,17 @@ using Vuforia;
 
 /// <summary>
 /// A custom handler that implements the ITrackableEventHandler interface.
-/// 
-/// Changes made to this file could be overwritten when upgrading the Vuforia version. 
+///
+/// Changes made to this file could be overwritten when upgrading the Vuforia version.
 /// When implementing custom event handler behavior, consider inheriting from this class instead.
 /// </summary>
 public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandler
 {
-
-    public GameObject manager;
-
     #region PROTECTED_MEMBER_VARIABLES
 
     protected TrackableBehaviour mTrackableBehaviour;
+    protected TrackableBehaviour.Status m_PreviousStatus;
+    protected TrackableBehaviour.Status m_NewStatus;
 
     #endregion // PROTECTED_MEMBER_VARIABLES
 
@@ -30,7 +29,6 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
     protected virtual void Start()
     {
-        //print(manager.transform.position);
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
@@ -54,6 +52,9 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         TrackableBehaviour.Status previousStatus,
         TrackableBehaviour.Status newStatus)
     {
+        m_PreviousStatus = previousStatus;
+        m_NewStatus = newStatus;
+
         if (newStatus == TrackableBehaviour.Status.DETECTED ||
             newStatus == TrackableBehaviour.Status.TRACKED ||
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
@@ -82,11 +83,6 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 
     protected virtual void OnTrackingFound()
     {
-        if (mTrackableBehaviour.TrackableName == "poster_anchor")
-        {
-            print("was here");
-            manager.GetComponent<Manager>().gefunden = true;
-        }
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
         var canvasComponents = GetComponentsInChildren<Canvas>(true);
