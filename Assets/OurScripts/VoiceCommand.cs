@@ -64,13 +64,12 @@ public class VoiceCommand : MonoBehaviour
 
     void SetMilkAsProduct()
     {
-        manager.SetMilkAsProduct();
+        manager.SetProduct(Manager.Product.Milk);
     }
 
     void SetCornyAsProduct()
     {
-        billboard.GetComponent<TextMesh>().text = "Corny";
-        prouctIsSet = true;
+        manager.SetProduct(Manager.Product.Corny);
     }
 
     void StartDemo()
@@ -80,12 +79,12 @@ public class VoiceCommand : MonoBehaviour
 
     void SetPathToDairyProducts()
     {
-        manager.SetPathToDairyProducts();
+        manager.SetPath(Manager.Section.Dairy);
     }
 
     void SetPathToSnacks()
     {
-        manager.SetPathToSnacks();
+        manager.SetPath(Manager.Section.Snacks);
     }
 
     // Resets Manager and Pathfinding Objects with Tag

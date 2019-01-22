@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pathfinding : MonoBehaviour {
+public class Pathfinding : MonoBehaviour
+{
 
     public GameObject[] waypoints;
     int activeWaypoint;
@@ -14,10 +15,9 @@ public class Pathfinding : MonoBehaviour {
 
     private bool active = false;
 
-    public bool arrivedAtDestination = false;
-
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         camPos = cam.GetComponent<Transform>();
 
@@ -33,12 +33,13 @@ public class Pathfinding : MonoBehaviour {
 
         ResetPathfinding();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         if (active)
             CheckWaypoint();
-	}
+    }
 
     // Changes activeWaypoint and changes AudioSource to play - calls manager if arrived at last Waypoint
     void WaypointReached()
@@ -49,13 +50,13 @@ public class Pathfinding : MonoBehaviour {
         if (activeWaypoint < waypoints.Length - 1)
         {
             activeWaypoint++;
-            waypoints[activeWaypoint].GetComponent<AudioSource>().Stop();
             waypoints[activeWaypoint].SetActive(true);
+            waypoints[activeWaypoint].GetComponent<AudioSource>().Play();
         }
         else
         {
             manager.ArrivedAtSection();
-        }        
+        }
     }
 
     // Checks if Player (Camera) is close to Waypoint - Calls WaypointReached() if reached
@@ -70,7 +71,7 @@ public class Pathfinding : MonoBehaviour {
             WaypointReached();
         }
     }
-    
+
     // Deactivates and 
     public void ResetPathfinding()
     {

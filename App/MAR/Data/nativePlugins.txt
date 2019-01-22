@@ -5,5 +5,4 @@ SharingClient.dll
 VuforiaWrapper.dll
 SpatialUnderstanding.dll
 Vuforia.dll
-HolographicStreamerDesktop.dll
 AudioPluginMsHRTF.dll

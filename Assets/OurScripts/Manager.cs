@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Manager : MonoBehaviour {
+public class Manager : MonoBehaviour
+{
 
     // For text output
     public GameObject billboard;
@@ -16,22 +18,24 @@ public class Manager : MonoBehaviour {
     public AudioClip whichProductAudioFile;
 
     // States
-    enum State { Init, ReadyToStart, SectionSelection, PathNavigation, ProductSelection, ProductTracking};
-    enum Section { Init, Dairy, Snacks};
-    enum Product { Init, Corny, Chocolate, Milk, Butter};
+    public enum State { FindAnchor, ReadyToStart, SectionSelection, PathNavigation, ProductSelection, ProductTracking, ProductFound};
+    public enum Section { Init, Dairy, Snacks };
+    public enum Product { Init, Corny, Chocolate, Milk, Butter };
     State currentState;
     Section currentSection;
     Product currentProduct;
-    
+
     // Pathfinding
-    // order is: [0] dairy, [1] snacks
+    // order is: [0] Dairy, [1] Snacks
     public Pathfinding[] paths;
 
-    public GameObject cornyProduct;
+    // TrackingObjects
+    // order is: [0] Corny, [1] Milk ...
+    public GameObject[] products;
 
     // Use this for initialization
-    void Start () {
-
+    void Start()
+    {
         audioSource = gameObject.GetComponent<AudioSource>();
 
         text = billboard.GetComponent<TextMesh>();
@@ -54,9 +58,11 @@ public class Manager : MonoBehaviour {
             Debug.Log("Reset");
         }
 
+        SetText("Current state: " + currentState + "\nCurrent Section: " + currentSection + "\nCurrent Product. " + currentProduct);
+
         switch (currentState)
         {
-            case State.Init:
+            case State.FindAnchor:
                 break;
 
             case State.ReadyToStart:
@@ -90,12 +96,9 @@ public class Manager : MonoBehaviour {
 
     public void ResetDemo()
     {
-        currentState = State.Init;
+        currentState = State.FindAnchor;
         currentSection = Section.Init;
         currentProduct = Product.Init;
-
-        SetText("Go to anchor first");
-
         currentPathfinding = null;
 
         // resets all paths
@@ -109,8 +112,6 @@ public class Manager : MonoBehaviour {
         {
             GoToNextState();
 
-            SetText("Demo Started");
-
             audioSource.clip = whichSectionAudioFile;
             audioSource.Play(0);
         }
@@ -120,46 +121,38 @@ public class Manager : MonoBehaviour {
 
     #region State Changes from VoiceCommand or Vuforia
 
-    public void PosterGefunden()
+    public void PosterFound()
     {
-        if (currentState == State.Init)
+        if (currentState == State.FindAnchor)
         {
             GoToNextState();
-
-            SetText("Anchor found\nSay: >>Start Demo<<");
         }
     }
-
-    public void SetPathToDairyProducts()
+    
+    public void SetPath(Section section)
     {
         if (currentState == State.SectionSelection)
         {
-            GoToNextState();
+            switch (section)
+            {
+                case Section.Dairy: 
+                    
+                    GoToNextState();
+                    currentSection = Section.Dairy;
+                    currentPathfinding = paths[0];
+                    currentPathfinding.Activate();
+                    break;
 
-            currentSection = Section.Dairy;
+                case Section.Snacks:
 
-            currentPathfinding = paths[0];
-            currentPathfinding.Activate();
-
-            SetText("Navigation to Dairy Section");
+                    GoToNextState();
+                    currentSection = Section.Snacks;
+                    currentPathfinding = paths[1];
+                    currentPathfinding.Activate();
+                    break;
+            }
         }
     }
-
-    public void SetPathToSnacks()
-    {
-        if (currentState == State.SectionSelection)
-        {
-            GoToNextState();
-
-            currentSection = Section.Snacks;
-
-            currentPathfinding = paths[1];
-            currentPathfinding.Activate();
-
-            SetText("Navigation to Snack Section");
-        }
-    }
-
 
     public void ArrivedAtSection()
     {
@@ -173,21 +166,43 @@ public class Manager : MonoBehaviour {
         }
     }
 
-    public void SetMilkAsProduct()
+    public void SetProduct(Product product)
     {
-        if (currentState == State.ProductSelection && currentSection == Section.Dairy)
+        if (currentState == State.ProductSelection)
         {
-            GoToNextState();
-            currentProduct = Product.Milk;
+            if (currentSection == Section.Dairy && product == Product.Milk)
+            {
+                GoToNextState();
+                currentProduct = Product.Milk;
+            }
+            else if (currentSection == Section.Snacks && product == Product.Corny)
+            {
+                GoToNextState();
+                currentProduct = Product.Corny;
+            }
+            else
+            {
+                // TODO: Voice output
+                Debug.Log("Wrong Section");
+            }
         }
     }
 
-    public void SetCornyAsProduct()
+    public void ActivateProduct(Product product)
     {
-        if (currentState == State.ProductSelection && currentSection == Section.Snacks)
+        if (currentState == State.ProductTracking && product == currentProduct)
         {
+            switch (product)
+            {
+                case Product.Corny:
+                    products[0].GetComponent<AudioSource>().Play();
+                    break;
+
+                case Product.Milk:
+                    break;
+            }
+
             GoToNextState();
-            currentProduct = Product.Corny;
         }
     }
 
@@ -197,8 +212,8 @@ public class Manager : MonoBehaviour {
     {
         switch (currentState)
         {
-            case State.Init:
-                PosterGefunden();
+            case State.FindAnchor:
+                PosterFound();
                 break;
 
             case State.ReadyToStart:
@@ -206,7 +221,7 @@ public class Manager : MonoBehaviour {
                 break;
 
             case State.SectionSelection:
-                SetPathToSnacks();
+                SetPath(Section.Snacks);
                 break;
 
             case State.PathNavigation:
@@ -214,6 +229,7 @@ public class Manager : MonoBehaviour {
                 break;
 
             case State.ProductSelection:
+                SetProduct(Product.Milk);
                 break;
 
             case State.ProductTracking:
