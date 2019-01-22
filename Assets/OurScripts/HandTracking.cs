@@ -56,7 +56,6 @@ public class HandTracking : MonoBehaviour {
     {
         if (arg.state.source.kind == InteractionSourceKind.Hand)
         {
-
             Vector3 handPosition;
             Vector3 handVelocity;
 
