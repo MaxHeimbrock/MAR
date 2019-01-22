@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.4.27004.2006
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAR", "MAR\MAR.csproj", "{13A45C13-3265-47B8-BC48-A553B569DF55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "C:\Users\Max\Documents\GitHub\MAR\App\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj", "{A414B50A-F530-4B14-8ADC-14ED591EB288}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,8 +47,29 @@ Global
 		{13A45C13-3265-47B8-BC48-A553B569DF55}.Release|x86.ActiveCfg = Release|x86
 		{13A45C13-3265-47B8-BC48-A553B569DF55}.Release|x86.Build.0 = Release|x86
 		{13A45C13-3265-47B8-BC48-A553B569DF55}.Release|x86.Deploy.0 = Release|x86
- EndGlobalSection
+		{A414B50A-F530-4B14-8ADC-14ED591EB288}.Debug|ARM.ActiveCfg = Debug|ARM
+		{A414B50A-F530-4B14-8ADC-14ED591EB288}.Debug|ARM.Build.0 = Debug|ARM
+		{A414B50A-F530-4B14-8ADC-14ED591EB288}.Debug|x64.ActiveCfg = Debug|x64
+		{A414B50A-F530-4B14-8ADC-14ED591EB288}.Debug|x64.Build.0 = Debug|x64
+		{A414B50A-F530-4B14-8ADC-14ED591EB288}.Debug|x86.ActiveCfg = Debug|x86
+		{A414B50A-F530-4B14-8ADC-14ED591EB288}.Debug|x86.Build.0 = Debug|x86
+		{A414B50A-F530-4B14-8ADC-14ED591EB288}.Master|ARM.ActiveCfg = Master|ARM
+		{A414B50A-F530-4B14-8ADC-14ED591EB288}.Master|ARM.Build.0 = Master|ARM
+		{A414B50A-F530-4B14-8ADC-14ED591EB288}.Master|x64.ActiveCfg = Master|x64
+		{A414B50A-F530-4B14-8ADC-14ED591EB288}.Master|x64.Build.0 = Master|x64
+		{A414B50A-F530-4B14-8ADC-14ED591EB288}.Master|x86.ActiveCfg = Master|x86
+		{A414B50A-F530-4B14-8ADC-14ED591EB288}.Master|x86.Build.0 = Master|x86
+		{A414B50A-F530-4B14-8ADC-14ED591EB288}.Release|ARM.ActiveCfg = Release|ARM
+		{A414B50A-F530-4B14-8ADC-14ED591EB288}.Release|ARM.Build.0 = Release|ARM
+		{A414B50A-F530-4B14-8ADC-14ED591EB288}.Release|x64.ActiveCfg = Release|x64
+		{A414B50A-F530-4B14-8ADC-14ED591EB288}.Release|x64.Build.0 = Release|x64
+		{A414B50A-F530-4B14-8ADC-14ED591EB288}.Release|x86.ActiveCfg = Release|x86
+		{A414B50A-F530-4B14-8ADC-14ED591EB288}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5AC281C9-9B0F-4A07-B009-81F20E4B3E1A}
 	EndGlobalSection
 EndGlobal

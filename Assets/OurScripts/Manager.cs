@@ -16,22 +16,26 @@ public class Manager : MonoBehaviour
     private Pathfinding currentPathfinding;
     public AudioClip whichSectionAudioFile;
     public AudioClip whichProductAudioFile;
+    public AudioClip distanceSound;
 
     // States
-    public enum State { FindAnchor, ReadyToStart, SectionSelection, PathNavigation, ProductSelection, ProductTracking, ProductFound};
+    public enum State { FindAnchor, ReadyToStart, SectionSelection, PathNavigation, ProductSelection, ProductTracking, ProductFound, ProductTouched};
     public enum Section { Init, Dairy, Snacks };
-    public enum Product { Init, Corny, Chocolate, Milk, Butter };
+    public enum Product { Init, Corny, Cookie, MilkBlue, MilkGreen };
     State currentState;
     Section currentSection;
     Product currentProduct;
 
     // Pathfinding
-    // order is: [0] Dairy, [1] Snacks
+    // order is as in enum Section: [0] Dairy, [1] Snacks
     public Pathfinding[] paths;
 
     // TrackingObjects
-    // order is: [0] Corny, [1] Milk ...
+    // order is as in enum Product: [0] Corny, [1] Keks, [2] MilkBlue, [3] MilkGreen ...
     public GameObject[] products;
+
+    private Vector3 handPos;
+    private float distanceToProduct;
 
     // Use this for initialization
     void Start()
@@ -58,7 +62,7 @@ public class Manager : MonoBehaviour
             Debug.Log("Reset");
         }
 
-        SetText("Current state: " + currentState + "\nCurrent Section: " + currentSection + "\nCurrent Product. " + currentProduct);
+        SetText(currentState + "\n" + currentSection + "\n" + currentProduct + "\n" + distanceToProduct);
 
         switch (currentState)
         {
@@ -79,6 +83,13 @@ public class Manager : MonoBehaviour
 
             case State.ProductTracking:
                 break;
+
+            case State.ProductFound:
+                distanceToProduct = HandProductDistance();
+                break;
+
+            case State.ProductTouched:
+                break;
         }
     }
 
@@ -96,7 +107,9 @@ public class Manager : MonoBehaviour
 
     public void ResetDemo()
     {
-        currentState = State.FindAnchor;
+        if (currentState != State.FindAnchor)
+            currentState = State.ReadyToStart;
+
         currentSection = Section.Init;
         currentProduct = Product.Init;
         currentPathfinding = null;
@@ -104,6 +117,14 @@ public class Manager : MonoBehaviour
         // resets all paths
         for (int i = 0; i < paths.Length; i++)
             paths[i].ResetPathfinding();
+
+        handPos = new Vector3(0, 0, 0);
+        distanceToProduct = 0.0f;
+
+        if (currentState == State.ProductTracking)
+        {
+            products[(int)currentProduct - 1].GetComponent<AudioSource>().Stop();
+        }
     }
 
     public void StartDemo()
@@ -115,6 +136,28 @@ public class Manager : MonoBehaviour
             audioSource.clip = whichSectionAudioFile;
             audioSource.Play(0);
         }
+    }
+
+    public void SetHandPos(Vector3 handPos)
+    {
+        this.handPos = handPos;
+    }
+
+    public float HandProductDistance()
+    {
+        float result = 0;
+        
+        if (currentProduct != Product.Init && currentState == State.ProductFound)
+        {
+            result = Vector3.Distance(handPos, products[(int)currentProduct - 1].transform.position);            
+        }
+
+        if (result < 0.09f)
+        {
+            ProductTouched();
+        }
+
+        return result;
     }
 
     #endregion 
@@ -170,15 +213,15 @@ public class Manager : MonoBehaviour
     {
         if (currentState == State.ProductSelection)
         {
-            if (currentSection == Section.Dairy && product == Product.Milk)
+            if (currentSection == Section.Dairy && (product == Product.MilkBlue || product == Product.MilkGreen))
             {
                 GoToNextState();
-                currentProduct = Product.Milk;
+                currentProduct = product;
             }
-            else if (currentSection == Section.Snacks && product == Product.Corny)
+            else if (currentSection == Section.Snacks && (product == Product.Cookie || product == Product.Corny))
             {
                 GoToNextState();
-                currentProduct = Product.Corny;
+                currentProduct = product;
             }
             else
             {
@@ -192,18 +235,17 @@ public class Manager : MonoBehaviour
     {
         if (currentState == State.ProductTracking && product == currentProduct)
         {
-            switch (product)
-            {
-                case Product.Corny:
-                    products[0].GetComponent<AudioSource>().Play();
-                    break;
-
-                case Product.Milk:
-                    break;
-            }
-
+            products[(int)currentProduct - 1].GetComponent<AudioSource>().Play();
+            
             GoToNextState();
         }
+    }    
+
+    public void ProductTouched()
+    {
+        // TODO
+
+        GoToNextState();
     }
 
     #endregion
@@ -233,6 +275,11 @@ public class Manager : MonoBehaviour
                 break;
 
             case State.ProductTracking:
+                ActivateProduct(Product.Corny);
+                break;
+
+            case State.ProductTouched:
+                ProductTouched();
                 break;
         }
     }

@@ -15887,12 +15887,12 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\Max\\Documents\\MAR\\App\\MAR\\MAR.csproj",
+      "projectUniqueName": "C:\\Users\\Max\\Documents\\GitHub\\MAR\\App\\MAR\\MAR.csproj",
       "projectName": "MAR",
-      "projectPath": "C:\\Users\\Max\\Documents\\MAR\\App\\MAR\\MAR.csproj",
-      "projectJsonPath": "C:\\Users\\Max\\Documents\\MAR\\App\\MAR\\project.json",
+      "projectPath": "C:\\Users\\Max\\Documents\\GitHub\\MAR\\App\\MAR\\MAR.csproj",
+      "projectJsonPath": "C:\\Users\\Max\\Documents\\GitHub\\MAR\\App\\MAR\\project.json",
       "packagesPath": "C:\\Users\\Max\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Max\\Documents\\MAR\\App\\MAR\\obj\\",
+      "outputPath": "C:\\Users\\Max\\Documents\\GitHub\\MAR\\App\\MAR\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
         "C:\\Users\\Max\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -97,6 +97,18 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             case "CornyMarker":
                 manager.ActivateProduct(Manager.Product.Corny);
                 break;
+
+            case "Keks_1":
+                manager.ActivateProduct(Manager.Product.Cookie);
+                break;
+
+            case "BL_Milk_1":
+                manager.ActivateProduct(Manager.Product.MilkGreen);
+                break;
+
+            case "UL_Milk_1":
+                manager.ActivateProduct(Manager.Product.MilkBlue);
+                break;
         }
         
         

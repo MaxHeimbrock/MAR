@@ -5,12 +5,13 @@
 # Write a line equal to 'overwrite-all' (without quotes) to overwrite everything (preserved accross builds)
 # Write a line equal to 'keep-all' (without quotes) to keep files regardless their modification (preserved accross builds)
 # Default behavior is to never overwrite files
-MAR.sln: 878B6D99422241D4A93E55293024C7A1
+MAR.sln: modified
+GeneratedProjects\UWP\Assembly-CSharp\project.json: 1D02BC64BAC0D041019673A1C4C51737
 MAR\App.cs: 344F6CB53ECF9845DAB79F15ADF73921
 MAR\AssemblyConverterArgs.txt: 169342687A497F3B8A16892372288662
 MAR\MAR.csproj: 32FB6308D42AD90EB88378395A66189C
 MAR\MAR.csproj.user: modified
-MAR\Package.appxmanifest: 696653323EAB2A849CCA769DA06FCCF0
+MAR\Package.appxmanifest: modified
 MAR\project.json: 1D02BC64BAC0D041019673A1C4C51737
 MAR\Assets\SplashScreen.scale-200.png: A85C1D7624B6902CF8CEBD6F0200A826
 MAR\Assets\Square150x150Logo.scale-200.png: E02834B4A5DFB97FF8E212C1CACBB084

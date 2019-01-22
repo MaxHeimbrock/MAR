@@ -36,8 +36,10 @@ public class VoiceCommand : MonoBehaviour
 
     void Start()
     {
-        actions.Add("milk", SetMilkAsProduct);
+        actions.Add("blue milk", SetMilkBlueAsProduct);
+        actions.Add("green milk", SetMilkGreenAsProduct);
         actions.Add("corny", SetCornyAsProduct);
+        actions.Add("cookies", SetCookieAsProduct);
 
         actions.Add("Start Demo", StartDemo);
         actions.Add("Dairy Products", SetPathToDairyProducts);
@@ -62,14 +64,24 @@ public class VoiceCommand : MonoBehaviour
         pathIsMax = true;
     }
 
-    void SetMilkAsProduct()
+    void SetMilkBlueAsProduct()
     {
-        manager.SetProduct(Manager.Product.Milk);
+        manager.SetProduct(Manager.Product.MilkBlue);
+    }
+
+    void SetMilkGreenAsProduct()
+    {
+        manager.SetProduct(Manager.Product.MilkGreen);
     }
 
     void SetCornyAsProduct()
     {
         manager.SetProduct(Manager.Product.Corny);
+    }
+
+    void SetCookieAsProduct()
+    {
+        manager.SetProduct(Manager.Product.Cookie);
     }
 
     void StartDemo()

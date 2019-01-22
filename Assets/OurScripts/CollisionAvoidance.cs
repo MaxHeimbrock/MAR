@@ -21,21 +21,22 @@ public class CollisionAvoidance : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
-        if(Physics.Raycast(camTransform.position, camTransform.rotation.eulerAngles, out hit, Mathf.Infinity))
-        {
-            if(hit.distance < 1.0)
-            {
-                audioSource.Play();
-                Debug.DrawRay(camTransform.position, camTransform.rotation.eulerAngles * hit.distance, Color.yellow);
-                Debug.Log("Close Hit");
-            } else
-            {
-                Debug.DrawRay(camTransform.position, camTransform.rotation.eulerAngles * hit.distance, Color.white);
-                Debug.Log("Far Hit");
-            }
-           
-
-        }
+        //if(Physics.Raycast(camTransform.position, camTransform.rotation.eulerAngles, out hit, Mathf.Infinity))
+        //{
+        //    if(hit.distance < 1.0)
+        //    {
+        //        audioSource.Play();
+        //        Debug.DrawRay(camTransform.position, camTransform.rotation.eulerAngles * hit.distance, Color.yellow);
+        //        Debug.Log("Close Hit with " + hit.collider.gameObject.name);
+        //
+        //    } else
+        //    {
+        //        Debug.DrawRay(camTransform.position, camTransform.rotation.eulerAngles * hit.distance, Color.white);
+        //        Debug.Log("Far Hit with " + hit.collider.gameObject.name);
+        //    }
+        //
+        //    
+        //}
 
         //if (Physics.Raycast(camTransform.position, camTransform.rotation.eulerAngles, 1.0f))
         //{

@@ -2,5 +2,6 @@
     <PropertyGroup>
         <UnityWSAPlayerDir>C:\Program Files\Unity\Editor\Data\PlaybackEngines\MetroSupport\</UnityWSAPlayerDir>
         <UnityWSAToolsDir>$(SolutionDir)Unity\Tools\</UnityWSAToolsDir>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
 </Project>

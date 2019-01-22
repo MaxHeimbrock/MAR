@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33073558454577866}
   - component: {fileID: 23664649267160196}
   - component: {fileID: 135824145680188452}
-  - component: {fileID: 114839097972734380}
   - component: {fileID: 82579503527565424}
   m_Layer: 0
   m_Name: Waypoint
@@ -181,19 +180,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114839097972734380
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1003797020655550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb24a9e0fc20a9b4398e713fd6fff53f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  play: 0
 --- !u!135 &135824145680188452
 SphereCollider:
   m_ObjectHideFlags: 1
