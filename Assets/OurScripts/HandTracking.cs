@@ -36,26 +36,38 @@ public class HandTracking : MonoBehaviour {
 
     private void InteractionManager_SourceDetected(InteractionSourceDetectedEventArgs arg)
     {
-        ShowObjects(true);
+        if (arg.state.source.kind == InteractionSourceKind.Hand)
+        {
+            ShowObjects(true);
+        }
     }
 
     private void InteractionManager_SourceLost(InteractionSourceLostEventArgs arg)
     {
-        ShowObjects(false);
+        if (arg.state.source.kind == InteractionSourceKind.Hand)
+        {
+            ShowObjects(false);
+
+            manager.SetHandPos(new Vector3(0, 0, 0));
+        }
     }
 
     private void InteractionManager_SourceUpdated(InteractionSourceUpdatedEventArgs arg)
     {
-        Vector3 handPosition;
-        Vector3 handVelocity;        
+        if (arg.state.source.kind == InteractionSourceKind.Hand)
+        {
 
-        arg.state.sourcePose.TryGetPosition(out handPosition);
-        arg.state.sourcePose.TryGetVelocity(out handVelocity);
+            Vector3 handPosition;
+            Vector3 handVelocity;
 
-        manager.SetHandPos(handPosition);
+            arg.state.sourcePose.TryGetPosition(out handPosition);
+            arg.state.sourcePose.TryGetVelocity(out handVelocity);
 
-        UpdateText(handPosition, handVelocity);
-        UpdateIndicator(handPosition);        
+            manager.SetHandPos(handPosition);
+
+            UpdateText(handPosition, handVelocity);
+            UpdateIndicator(handPosition);
+        }
     }
 
     private void CreateIndicator()

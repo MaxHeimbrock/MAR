@@ -6,7 +6,7 @@ Assets/Scenes/Blütenstraße.unity
 SceneListEnd?
 7abde016883951c4ca4e7c44ce6adb2c Assembly-CSharp.dll:HoloToolkit.Unity.SceneLauncher
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.UX.BoundingBoxGizmoHandle
-8bb33fe8cd138986aad77a6cc4232a25 Assembly-CSharp.dll:.Manager
+97638d928671da29341b2abf6b196642 Assembly-CSharp.dll:.Manager
 c435bd06b74bbebac563a6d81dae369c Assembly-CSharp.dll:HoloToolkit.Unity.CanvasHelper
 6dcd5512ea7912a6bfb5a8bc726e3049 Assembly-CSharp.dll:HoloToolkit.Unity.UX.Bezier
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.FadeScript
@@ -475,3 +475,4 @@ a924c90a95cf65003f662aa5e30abb6b Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HandTracking
+dfdd2a9666378d63533f124f559d781f Assembly-CSharp.dll:.MyNode

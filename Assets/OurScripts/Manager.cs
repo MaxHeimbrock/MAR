@@ -16,7 +16,7 @@ public class Manager : MonoBehaviour
     private Pathfinding currentPathfinding;
     public AudioClip whichSectionAudioFile;
     public AudioClip whichProductAudioFile;
-    public AudioClip distanceSound;
+    public AudioClip touchedSound;
 
     // States
     public enum State { FindAnchor, ReadyToStart, SectionSelection, PathNavigation, ProductSelection, ProductTracking, ProductFound, ProductTouched};
@@ -120,11 +120,8 @@ public class Manager : MonoBehaviour
 
         handPos = new Vector3(0, 0, 0);
         distanceToProduct = 0.0f;
-
-        if (currentState == State.ProductTracking)
-        {
-            products[(int)currentProduct - 1].GetComponent<AudioSource>().Stop();
-        }
+        
+        products[(int)currentProduct - 1].GetComponent<AudioSource>().Stop();
     }
 
     public void StartDemo()
@@ -152,7 +149,7 @@ public class Manager : MonoBehaviour
             result = Vector3.Distance(handPos, products[(int)currentProduct - 1].transform.position);            
         }
 
-        if (result < 0.09f)
+        if (result < 0.07f)
         {
             ProductTouched();
         }
@@ -243,7 +240,10 @@ public class Manager : MonoBehaviour
 
     public void ProductTouched()
     {
-        // TODO
+        products[(int)currentProduct - 1].GetComponent<AudioSource>().Stop();
+
+        audioSource.clip = touchedSound;
+        audioSource.Play(0);
 
         GoToNextState();
     }
