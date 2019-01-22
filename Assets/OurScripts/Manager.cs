@@ -229,7 +229,7 @@ public class Manager : MonoBehaviour
                 break;
 
             case State.ProductSelection:
-                SetProduct(Product.Milk);
+                SetProduct(Product.Corny);
                 break;
 
             case State.ProductTracking:

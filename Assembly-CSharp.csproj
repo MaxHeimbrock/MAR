@@ -636,10 +636,10 @@
      <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\UnlitConfigurable.cginc" />
      <None Include="Assets\HoloToolkit\UX\Shaders\3DTextShader.shader" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/Max/Documents/MAR/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Max/Documents/GitHub/MAR/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/Max/Documents/MAR/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Max/Documents/GitHub/MAR/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/MetroSupport/Tools/UnityEngine.AIModule.dll</HintPath>
@@ -834,10 +834,10 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="GLTFSerialization">
- <HintPath>C:/Users/Max/Documents/MAR/Assets/HoloToolkit/Utilities/Scripts/GLTF/Plugins/GLTFSerialization/GLTFSerialization.dll</HintPath>
+ <HintPath>C:/Users/Max/Documents/GitHub/MAR/Assets/HoloToolkit/Utilities/Scripts/GLTF/Plugins/GLTFSerialization/GLTFSerialization.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/Max/Documents/MAR/Assets/HoloToolkit/Utilities/Scripts/GLTF/Plugins/JsonNet/Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/Max/Documents/GitHub/MAR/Assets/HoloToolkit/Utilities/Scripts/GLTF/Plugins/JsonNet/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Users/Max/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>

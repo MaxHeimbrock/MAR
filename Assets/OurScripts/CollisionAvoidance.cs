@@ -9,8 +9,10 @@ public class CollisionAvoidance : MonoBehaviour {
     private Transform camTransform;
     AudioSource audioSource;
 
-	// Use this for initialization
-	void Start () {
+    private RaycastHit hit;
+
+    // Use this for initialization
+    void Start () {
         camTransform = cam.GetComponent<Transform>();
 
         audioSource = gameObject.GetComponent<AudioSource>();
@@ -18,11 +20,28 @@ public class CollisionAvoidance : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Physics.Raycast(camTransform.position, camTransform.rotation.eulerAngles, 1.0f))
+        
+        if(Physics.Raycast(camTransform.position, camTransform.rotation.eulerAngles, out hit, Mathf.Infinity))
         {
-            audioSource.Play();
+            if(hit.distance < 1.0)
+            {
+                audioSource.Play();
+                Debug.DrawRay(camTransform.position, camTransform.rotation.eulerAngles * hit.distance, Color.yellow);
+                Debug.Log("Close Hit");
+            } else
+            {
+                Debug.DrawRay(camTransform.position, camTransform.rotation.eulerAngles * hit.distance, Color.white);
+                Debug.Log("Far Hit");
+            }
+           
 
-            Debug.Log("collision");
-        }                
-	}
+        }
+
+        //if (Physics.Raycast(camTransform.position, camTransform.rotation.eulerAngles, 1.0f))
+        //{
+        //    audioSource.Play();
+
+        //    Debug.Log("collision");
+        //}
+    }
 }
