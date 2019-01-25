@@ -563,11 +563,12 @@
      <Compile Include="Assets\HoloToolkit\UX\Scripts\UICollection.cs" />
      <Compile Include="Assets\HoloToolkit\UX\Scripts\UsabilityScaler.cs" />
      <Compile Include="Assets\HoloToolkit\UX\Scripts\UsabilityUtilities.cs" />
-     <Compile Include="Assets\MyNode.cs" />
      <Compile Include="Assets\OurScripts\CollisionAvoidance.cs" />
+     <Compile Include="Assets\OurScripts\Dijkstra.cs" />
      <Compile Include="Assets\OurScripts\HandTracking.cs" />
      <Compile Include="Assets\OurScripts\Manager.cs" />
      <Compile Include="Assets\OurScripts\Pathfinding.cs" />
+     <Compile Include="Assets\OurScripts\PathNode.cs" />
      <Compile Include="Assets\OurScripts\VoiceCommand.cs" />
      <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
      <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />

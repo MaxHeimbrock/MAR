@@ -17,18 +17,18 @@ public class Manager : MonoBehaviour
     public AudioClip whichSectionAudioFile;
     public AudioClip whichProductAudioFile;
     public AudioClip touchedSound;
+    public AudioClip startDemo;
 
     // States
     public enum State { FindAnchor, ReadyToStart, SectionSelection, PathNavigation, ProductSelection, ProductTracking, ProductFound, ProductTouched};
-    public enum Section { Init, Dairy, Snacks };
+    public enum Section { Init, Dairy = 5, Snacks = 7 }; 
     public enum Product { Init, Corny, Cookie, MilkBlue, MilkGreen };
     State currentState;
     Section currentSection;
     Product currentProduct;
 
     // Pathfinding
-    // order is as in enum Section: [0] Dairy, [1] Snacks
-    public Pathfinding[] paths;
+    private Dijkstra dijkstra;
 
     // TrackingObjects
     // order is as in enum Product: [0] Corny, [1] Keks, [2] MilkBlue, [3] MilkGreen ...
@@ -40,6 +40,14 @@ public class Manager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        dijkstra = new Dijkstra();
+
+        GameObject[] waypoints = GameObject.FindGameObjectsWithTag("waypoint");
+        for (int i = 0; i < waypoints.Length; i++)
+        {
+            waypoints[i].SetActive(false);
+        }
+
         audioSource = gameObject.GetComponent<AudioSource>();
 
         text = billboard.GetComponent<TextMesh>();
@@ -108,15 +116,13 @@ public class Manager : MonoBehaviour
     public void ResetDemo()
     {
         if (currentState != State.FindAnchor)
-            currentState = State.ReadyToStart;
+        {
+            currentState = State.FindAnchor;
+            PosterFound();
+        }
 
         currentSection = Section.Init;
         currentProduct = Product.Init;
-        currentPathfinding = null;
-
-        // resets all paths
-        for (int i = 0; i < paths.Length; i++)
-            paths[i].ResetPathfinding();
 
         handPos = new Vector3(0, 0, 0);
         distanceToProduct = 0.0f;
@@ -128,6 +134,9 @@ public class Manager : MonoBehaviour
     {
         if (currentState == State.ReadyToStart)
         {
+            audioSource.loop = false;
+            audioSource.Stop();
+
             GoToNextState();
 
             audioSource.clip = whichSectionAudioFile;
@@ -165,6 +174,9 @@ public class Manager : MonoBehaviour
     {
         if (currentState == State.FindAnchor)
         {
+            audioSource.loop = true;
+            audioSource.clip = startDemo;
+            audioSource.Play();
             GoToNextState();
         }
     }
@@ -173,24 +185,9 @@ public class Manager : MonoBehaviour
     {
         if (currentState == State.SectionSelection)
         {
-            switch (section)
-            {
-                case Section.Dairy: 
-                    
-                    GoToNextState();
-                    currentSection = Section.Dairy;
-                    currentPathfinding = paths[0];
-                    currentPathfinding.Activate();
-                    break;
-
-                case Section.Snacks:
-
-                    GoToNextState();
-                    currentSection = Section.Snacks;
-                    currentPathfinding = paths[1];
-                    currentPathfinding.Activate();
-                    break;
-            }
+            GoToNextState();
+            currentSection = section;
+            dijkstra.FindPathToGoal((int)currentSection);
         }
     }
 
@@ -199,7 +196,6 @@ public class Manager : MonoBehaviour
         if (currentState == State.PathNavigation)
         {
             GoToNextState();
-            currentPathfinding.ResetPathfinding();
 
             audioSource.clip = whichProductAudioFile;
             audioSource.Play(0);
@@ -250,7 +246,7 @@ public class Manager : MonoBehaviour
 
     #endregion
 
-    private void ManualStep()
+    public void ManualStep()
     {
         switch (currentState)
         {

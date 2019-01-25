@@ -37,14 +37,16 @@ public class VoiceCommand : MonoBehaviour
     void Start()
     {
         actions.Add("blue milk", SetMilkBlueAsProduct);
+        actions.Add("Unser Land Milch", SetMilkBlueAsProduct);
         actions.Add("green milk", SetMilkGreenAsProduct);
         actions.Add("corny", SetCornyAsProduct);
         actions.Add("cookies", SetCookieAsProduct);
 
-        actions.Add("Start Demo", StartDemo);
+        actions.Add("Start Demo", manager.StartDemo);
         actions.Add("Dairy Products", SetPathToDairyProducts);
         actions.Add("Snacks", SetPathToSnacks);
-        actions.Add("Reset Demo", ResetDemo);
+        actions.Add("Reset Demo", manager.ResetDemo);
+        actions.Add("manual step", manager.ManualStep);
 
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += RecognizeSpeech;
@@ -55,13 +57,6 @@ public class VoiceCommand : MonoBehaviour
     {
         print(speech.text);
         actions[speech.text].Invoke();
-    }
-
-    void SetMaxAsPath()
-    {
-        billboard.GetComponent<TextMesh>().text = "Max";
-        pathIsSet = true;
-        pathIsMax = true;
     }
 
     void SetMilkBlueAsProduct()
@@ -84,11 +79,6 @@ public class VoiceCommand : MonoBehaviour
         manager.SetProduct(Manager.Product.Cookie);
     }
 
-    void StartDemo()
-    {
-        manager.StartDemo();
-    }
-
     void SetPathToDairyProducts()
     {
         manager.SetPath(Manager.Section.Dairy);
@@ -97,19 +87,5 @@ public class VoiceCommand : MonoBehaviour
     void SetPathToSnacks()
     {
         manager.SetPath(Manager.Section.Snacks);
-    }
-
-    // Resets Manager and Pathfinding Objects with Tag
-    void ResetDemo()
-    {
-        manager.ResetDemo();
-
-        GameObject[] paths = GameObject.FindGameObjectsWithTag("Pathfinding");
-
-        foreach (GameObject path in paths)
-        {
-            path.GetComponent<Pathfinding>().ResetPathfinding();
-            Debug.Log("Path Reset");
-        }
     }
 }

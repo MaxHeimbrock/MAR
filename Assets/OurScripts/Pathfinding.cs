@@ -5,7 +5,8 @@ using UnityEngine;
 public class Pathfinding : MonoBehaviour
 {
 
-    public GameObject[] waypoints;
+    public GameObject[] allWaypoints;
+    private int[] path;
     int activeWaypoint;
 
     private GameObject cam;
@@ -13,7 +14,7 @@ public class Pathfinding : MonoBehaviour
 
     private Manager manager;
 
-    private bool active = false;
+    private bool active;
 
     // Use this for initialization
     void Start()
@@ -23,6 +24,10 @@ public class Pathfinding : MonoBehaviour
 
         //waypoints[activeWaypoint].GetComponent<soundScript>().ActivateSound();
 
+        allWaypoints = GameObject.FindGameObjectsWithTag("waypoint");
+        activeWaypoint = 0;
+        path = new int[0];
+
         manager = GameObject.FindGameObjectWithTag("GameController").GetComponent<Manager>();
 
         if (manager != null)
@@ -30,8 +35,6 @@ public class Pathfinding : MonoBehaviour
 
         else
             Debug.Log("manager not found with tag by Pathfinding");
-
-        ResetPathfinding();
     }
 
     // Update is called once per frame
@@ -44,17 +47,16 @@ public class Pathfinding : MonoBehaviour
     // Changes activeWaypoint and changes AudioSource to play - calls manager if arrived at last Waypoint
     void WaypointReached()
     {
-        waypoints[activeWaypoint].GetComponent<AudioSource>().Stop();
-        waypoints[activeWaypoint].SetActive(false);
+        Deactivate();
 
-        if (activeWaypoint < waypoints.Length - 1)
+        if (activeWaypoint < path.Length - 1)
         {
             activeWaypoint++;
-            waypoints[activeWaypoint].SetActive(true);
-            waypoints[activeWaypoint].GetComponent<AudioSource>().Play();
+            Activate();
         }
         else
         {
+            activeWaypoint = 0;
             manager.ArrivedAtSection();
         }
     }
@@ -64,7 +66,7 @@ public class Pathfinding : MonoBehaviour
     {
         Vector2 camPos2D = new Vector2(camPos.position.x, camPos.position.z);
 
-        Vector2 waypoint2D = new Vector2(waypoints[activeWaypoint].transform.position.x, waypoints[activeWaypoint].transform.position.z);
+        Vector2 waypoint2D = new Vector2(allWaypoints[activeWaypoint].transform.position.x, allWaypoints[activeWaypoint].transform.position.z);
 
         if (Vector2.Distance(camPos2D, waypoint2D) < 0.3)
         {
@@ -72,27 +74,26 @@ public class Pathfinding : MonoBehaviour
         }
     }
 
-    // Deactivates and 
-    public void ResetPathfinding()
-    {
-        Deactivate();
-
-        activeWaypoint = 0;
-    }
-
     // Starts Sound and Pathfinding
-    public void Activate()
+    void Activate()
     {
         active = true;
-        waypoints[activeWaypoint].SetActive(true);
-        waypoints[activeWaypoint].GetComponent<AudioSource>().Play();
+        allWaypoints[activeWaypoint].SetActive(true);
+        allWaypoints[activeWaypoint].GetComponent<AudioSource>().Play();
     }
 
     // Stops Sound and Pathfinding
-    public void Deactivate()
+    void Deactivate()
     {
         active = false;
-        waypoints[activeWaypoint].SetActive(false);
-        waypoints[activeWaypoint].GetComponent<AudioSource>().Stop();
+        allWaypoints[activeWaypoint].SetActive(false);
+        allWaypoints[activeWaypoint].GetComponent<AudioSource>().Stop();
+    }
+
+    // This method is called in Dijkstra. Only way to activate Pathfinding
+    public void SetPath(int[] path)
+    {
+        this.path = path;
+        Activate();
     }
 }

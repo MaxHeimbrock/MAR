@@ -6,7 +6,7 @@ Assets/Scenes/Blütenstraße.unity
 SceneListEnd?
 7abde016883951c4ca4e7c44ce6adb2c Assembly-CSharp.dll:HoloToolkit.Unity.SceneLauncher
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.UX.BoundingBoxGizmoHandle
-97638d928671da29341b2abf6b196642 Assembly-CSharp.dll:.Manager
+c719da48125723647c71b40f31486b43 Assembly-CSharp.dll:.Manager
 c435bd06b74bbebac563a6d81dae369c Assembly-CSharp.dll:HoloToolkit.Unity.CanvasHelper
 6dcd5512ea7912a6bfb5a8bc726e3049 Assembly-CSharp.dll:HoloToolkit.Unity.UX.Bezier
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.FadeScript
@@ -117,6 +117,7 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 f89a8d78d1b7569984dadda2f4e9c975 Assembly-CSharp.dll:HoloToolkit.Unity.UX.AppBar
 83919fb5f9d7e5441069b9286488fa33 Assembly-CSharp.dll:HoloToolkit.Unity.UX.DistorterSimplex
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Sharing.DefaultSyncModelAccessor
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HandTracking
 2aa413f79a7ac9510ed7b68022c9e200 Assembly-CSharp.dll:HoloToolkit.Unity.UX.LineUnity
 917c688892e418a03fefb51e61b1622c Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.MixedRealityCameraManager
 06b78688ddd32fd8e636842d5ee81e27 Assembly-CSharp.dll:HoloToolkit.Unity.SpatialMapping.FileSurfaceObserver
@@ -292,7 +293,7 @@ a25a8c9491d9347bc4d0987ee1b2f8ad Assembly-CSharp.dll:HoloToolkit.Unity.Buttons.O
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.CalibrationSpace
 9c9dfbd5b94888324d2380019ff9c560 Assembly-CSharp.dll:HoloToolkit.Unity.SpatialUnderstanding
 78fc8f34569d786a7f52cd5f3c26de57 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.TouchscreenInputSource
-789538b98caa0ed3e35304b1b11e9337 Assembly-CSharp.dll:.Pathfinding
+df69b75e90a5afbc16e4e13211cbb1ec Assembly-CSharp.dll:.Pathfinding
 f133614bc5eb7ed8e7fb906136387ff4 Assembly-CSharp.dll:HoloToolkit.Unity.SpatialMapping.SpatialMappingObserver
 7f51c3ae6d2a735d8137d211eefae86d Assembly-CSharp.dll:HoloToolkit.Unity.Tagalong
 0a29033c4906a1c78aeb5745a76054d6 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.InteractiveMeshCursor
@@ -474,5 +475,4 @@ a924c90a95cf65003f662aa5e30abb6b Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 01e6f145049f3a676df6dc247eabf176 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HandTracking
-dfdd2a9666378d63533f124f559d781f Assembly-CSharp.dll:.MyNode
+9e0fa6a7dd4a16469dd5d3edecdb3f84 Assembly-CSharp.dll:.PathNode
