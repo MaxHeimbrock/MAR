@@ -13,7 +13,6 @@ public class Manager : MonoBehaviour
     // For Audio I/O
     AudioSource audioSource;
     public VoiceCommand voiceCommand;
-    private Pathfinding currentPathfinding;
     public AudioClip whichSectionAudioFile;
     public AudioClip whichProductAudioFile;
     public AudioClip touchedSound;
@@ -126,8 +125,9 @@ public class Manager : MonoBehaviour
 
         handPos = new Vector3(0, 0, 0);
         distanceToProduct = 0.0f;
-        
-        products[(int)currentProduct - 1].GetComponent<AudioSource>().Stop();
+
+        if (currentProduct != Product.Init)
+            products[(int)currentProduct - 1].GetComponent<AudioSource>().Stop();
     }
 
     public void StartDemo()

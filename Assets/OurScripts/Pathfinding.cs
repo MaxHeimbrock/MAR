@@ -22,19 +22,7 @@ public class Pathfinding : MonoBehaviour
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         camPos = cam.GetComponent<Transform>();
 
-        //waypoints[activeWaypoint].GetComponent<soundScript>().ActivateSound();
-
-        allWaypoints = GameObject.FindGameObjectsWithTag("waypoint");
-        activeWaypoint = 0;
-        path = new int[0];
-
         manager = GameObject.FindGameObjectWithTag("GameController").GetComponent<Manager>();
-
-        if (manager != null)
-            Debug.Log("manager found with tag by Pathfinding");
-
-        else
-            Debug.Log("manager not found with tag by Pathfinding");
     }
 
     // Update is called once per frame
@@ -66,7 +54,7 @@ public class Pathfinding : MonoBehaviour
     {
         Vector2 camPos2D = new Vector2(camPos.position.x, camPos.position.z);
 
-        Vector2 waypoint2D = new Vector2(allWaypoints[activeWaypoint].transform.position.x, allWaypoints[activeWaypoint].transform.position.z);
+        Vector2 waypoint2D = new Vector2(allWaypoints[path[activeWaypoint]].transform.position.x, allWaypoints[path[activeWaypoint]].transform.position.z);
 
         if (Vector2.Distance(camPos2D, waypoint2D) < 0.3)
         {
@@ -78,22 +66,28 @@ public class Pathfinding : MonoBehaviour
     void Activate()
     {
         active = true;
-        allWaypoints[activeWaypoint].SetActive(true);
-        allWaypoints[activeWaypoint].GetComponent<AudioSource>().Play();
+        allWaypoints[path[activeWaypoint]].SetActive(true);
+        allWaypoints[path[activeWaypoint]].GetComponent<AudioSource>().Play();
     }
 
     // Stops Sound and Pathfinding
     void Deactivate()
     {
         active = false;
-        allWaypoints[activeWaypoint].SetActive(false);
-        allWaypoints[activeWaypoint].GetComponent<AudioSource>().Stop();
+        allWaypoints[path[activeWaypoint]].SetActive(false);
+        allWaypoints[path[activeWaypoint]].GetComponent<AudioSource>().Stop();
     }
 
     // This method is called in Dijkstra. Only way to activate Pathfinding
-    public void SetPath(int[] path)
+    public void SetPath(int[] path, GameObject[] waypoints)
     {
         this.path = path;
+        allWaypoints = waypoints;
+        activeWaypoint = 0;
+        for(int i = 0; i < path.Length; i++)
+        {
+            Debug.Log(path[i]);
+        }
         Activate();
     }
 }

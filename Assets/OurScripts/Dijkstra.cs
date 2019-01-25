@@ -6,31 +6,38 @@ using UnityEngine;
 
 public class Dijkstra {
 
-    private GameObject[] allWaypoints;
+    public GameObject[] allWaypoints;
 
     private Pathfinding pathfinding;
 
     Transform camPos;
 
 
-    // Use this for initialization
+    // Use this for initialization - Waypoints are found by their name - Number of Waypoints is determined by Tag
     public Dijkstra () {
-        allWaypoints = GameObject.FindGameObjectsWithTag("waypoint");
-        camPos = GameObject.Find("Sphere").GetComponent<Transform>(); //----------------------------------------------------
+        allWaypoints = new GameObject[GameObject.FindGameObjectsWithTag("waypoint").Length];
+        for(int i = 0;  i < allWaypoints.Length; i++)
+        {
+            allWaypoints[i] = GameObject.Find("Waypoint (" + i + ")");
+        }
+        camPos = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>();
 
-        pathfinding = GameObject.Find("PathFinding").GetComponent<Pathfinding>();
-
+        pathfinding = GameObject.FindGameObjectWithTag("GameController").GetComponent<Pathfinding>();
     }
-
 
     public void FindPathToGoal(int goal)
     {
         int startWaypoint = FindClosestWaypoint();
+        for(int i = 0; i < allWaypoints.Length; i++)
+        {
+            Debug.LogError(allWaypoints[i]);
+        }
+        Debug.LogWarning("Ziel: " + goal + " Start: " + startWaypoint);
         if(goal == startWaypoint)
         {
             Debug.Log("Start equals Goal");
             int[] path = { goal };
-            pathfinding.SetPath(path);
+            pathfinding.SetPath(path, allWaypoints);
         }
         else
         {
@@ -49,7 +56,7 @@ public class Dijkstra {
                     if (currentNeighbor == goal)
                     {
                         Debug.Log("Dijkstra found shortest path.");
-                        pathfinding.SetPath(CreatePathArray(pathToNode[currentWaypoint] + goal));
+                        pathfinding.SetPath(CreatePathArray(pathToNode[currentWaypoint] + goal), allWaypoints);
                         return;
                     }
                     if (pathToNode[currentNeighbor] == null)
@@ -78,6 +85,7 @@ public class Dijkstra {
                 closestWaypoint = i;
             }
         }
+        Debug.Log(minDistance);
         return closestWaypoint;
     }
 

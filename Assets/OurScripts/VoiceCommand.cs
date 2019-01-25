@@ -23,15 +23,7 @@ public class VoiceCommand : MonoBehaviour
 
     private void Awake()
     {
-        //pathfinding = GetComponent<Pathfinding>();
-
         manager = GameObject.FindGameObjectWithTag("GameController").GetComponent<Manager>();
-
-        if (manager != null)
-            Debug.Log("manager found with tag by VoiceCommand");
-
-        else
-            Debug.Log("manager not found with tag by VoiceCommand");
     }
 
     void Start()

@@ -14,12 +14,6 @@ public class HandTracking : MonoBehaviour {
     void Start()
     {
         manager = GameObject.FindGameObjectWithTag("GameController").GetComponent<Manager>();
-
-        if (manager != null)
-            Debug.Log("manager found with tag by HandTracking");
-
-        else
-            Debug.Log("manager not found with tag by HandTracking");
         
         CreateIndicator();
         CreateText();
@@ -64,7 +58,7 @@ public class HandTracking : MonoBehaviour {
 
             manager.SetHandPos(handPosition);
 
-            UpdateText(handPosition, handVelocity);
+            //UpdateText(handPosition, handVelocity);
             UpdateIndicator(handPosition);
         }
     }

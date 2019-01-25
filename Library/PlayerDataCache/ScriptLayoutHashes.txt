@@ -270,6 +270,7 @@ cb3299cc3a2d8ae01f30f501bb96d4cf Assembly-CSharp.dll:HoloToolkit.Unity.InputModu
 060048163841f486acb147d2ead9eea2 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.ButtonController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.TimerScheduler
 86850bb803420472cf9bdf34ef5b7e0f Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.CustomInputSource
+9e0fa6a7dd4a16469dd5d3edecdb3f84 Assembly-CSharp.dll:.PathNode
 066f3c01e7c10bfbdc9fc130998d1d40 Assembly-CSharp.dll:HoloToolkit.Sharing.Spawning.PrefabSpawnManager
 3653e647f40c0f295672219cc1e7ebff Assembly-CSharp.dll:HoloToolkit.Unity.Buttons.SpriteButton
 c4fd2ef7468c68e11d03e50c6e8b323d Assembly-CSharp.dll:HoloToolkit.Unity.Buttons.AnimButton
@@ -475,4 +476,3 @@ a924c90a95cf65003f662aa5e30abb6b Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 01e6f145049f3a676df6dc247eabf176 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
-9e0fa6a7dd4a16469dd5d3edecdb3f84 Assembly-CSharp.dll:.PathNode
