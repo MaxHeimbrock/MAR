@@ -17,6 +17,7 @@ public class Manager : MonoBehaviour
     public AudioClip whichProductAudioFile;
     public AudioClip touchedSound;
     public AudioClip startDemo;
+    public AudioClip smallBell;
 
     // States
     public enum State { FindAnchor, ReadyToStart, SectionSelection, PathNavigation, ProductSelection, ProductTracking, ProductFound, ProductTouched};
@@ -114,6 +115,9 @@ public class Manager : MonoBehaviour
 
     public void ResetDemo()
     {
+        if (currentState == State.PathNavigation)
+            GetComponent<Pathfinding>().Deactivate();
+
         if (currentState != State.FindAnchor)
         {
             currentState = State.FindAnchor;
@@ -210,11 +214,15 @@ public class Manager : MonoBehaviour
             {
                 GoToNextState();
                 currentProduct = product;
+                audioSource.clip = smallBell;
+                audioSource.Play();
             }
             else if (currentSection == Section.Snacks && (product == Product.Cookie || product == Product.Corny))
             {
                 GoToNextState();
                 currentProduct = product;
+                audioSource.clip = smallBell;
+                audioSource.Play();
             }
             else
             {
@@ -263,6 +271,7 @@ public class Manager : MonoBehaviour
                 break;
 
             case State.PathNavigation:
+                GetComponent<Pathfinding>().Deactivate();
                 ArrivedAtSection();
                 break;
 

@@ -71,7 +71,7 @@ public class Pathfinding : MonoBehaviour
     }
 
     // Stops Sound and Pathfinding
-    void Deactivate()
+    public void Deactivate()
     {
         active = false;
         allWaypoints[path[activeWaypoint]].SetActive(false);

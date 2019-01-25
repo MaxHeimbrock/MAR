@@ -14,13 +14,6 @@ public class VoiceCommand : MonoBehaviour
 
     private Manager manager;
 
-    public bool pathIsSet = false;
-    public bool pathIsMax = false;
-    public bool prouctIsSet = false;
-    public bool productIsMilk = false;
-    //public GameObject drinkSection;
-    //public GameObject foodSection;
-
     private void Awake()
     {
         manager = GameObject.FindGameObjectWithTag("GameController").GetComponent<Manager>();

@@ -28,10 +28,6 @@ public class Dijkstra {
     public void FindPathToGoal(int goal)
     {
         int startWaypoint = FindClosestWaypoint();
-        for(int i = 0; i < allWaypoints.Length; i++)
-        {
-            Debug.LogError(allWaypoints[i]);
-        }
         Debug.LogWarning("Ziel: " + goal + " Start: " + startWaypoint);
         if(goal == startWaypoint)
         {
