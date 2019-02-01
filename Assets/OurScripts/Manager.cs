@@ -30,6 +30,9 @@ public class Manager : MonoBehaviour
     // Pathfinding
     private Dijkstra dijkstra;
 
+    // Sending to Watch
+    private SendToWatchTCP sendToWatch;
+
     // TrackingObjects
     // order is as in enum Product: [0] Corny, [1] Keks, [2] MilkBlue, [3] MilkGreen ...
     public GameObject[] products;
@@ -40,6 +43,7 @@ public class Manager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        sendToWatch = GetComponent<SendToWatchTCP>();
         dijkstra = new Dijkstra();
 
         GameObject[] waypoints = GameObject.FindGameObjectsWithTag("waypoint");
@@ -115,6 +119,9 @@ public class Manager : MonoBehaviour
 
     public void ResetDemo()
     {
+        sendToWatch.StartConnection();
+        sendToWatch.SetFrequency(-1.0f);
+
         if (currentState == State.PathNavigation)
             GetComponent<Pathfinding>().Deactivate();
 
@@ -159,13 +166,15 @@ public class Manager : MonoBehaviour
         
         if (currentProduct != Product.Init && currentState == State.ProductFound)
         {
-            result = Vector3.Distance(handPos, products[(int)currentProduct - 1].transform.position);            
+            result = Vector3.Distance(handPos, products[(int)currentProduct - 1].transform.position);
+            sendToWatch.SetFrequency(distanceToProduct);
         }
 
         if (result < 0.07f)
         {
             ProductTouched();
         }
+
 
         return result;
     }
@@ -236,7 +245,7 @@ public class Manager : MonoBehaviour
     {
         if (currentState == State.ProductTracking && product == currentProduct)
         {
-            products[(int)currentProduct - 1].GetComponent<AudioSource>().Play();
+            products[(int)currentProduct - 1].GetComponent<AudioSource>().Play();                       
             
             GoToNextState();
         }
@@ -245,9 +254,11 @@ public class Manager : MonoBehaviour
     public void ProductTouched()
     {
         products[(int)currentProduct - 1].GetComponent<AudioSource>().Stop();
-
+        
         audioSource.clip = touchedSound;
         audioSource.Play(0);
+
+        sendToWatch.SetFrequency(-1.0f);
 
         GoToNextState();
     }
@@ -283,7 +294,7 @@ public class Manager : MonoBehaviour
                 ActivateProduct(Product.Corny);
                 break;
 
-            case State.ProductTouched:
+            case State.ProductFound:
                 ProductTouched();
                 break;
         }

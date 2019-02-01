@@ -569,6 +569,8 @@
      <Compile Include="Assets\OurScripts\Manager.cs" />
      <Compile Include="Assets\OurScripts\Pathfinding.cs" />
      <Compile Include="Assets\OurScripts\PathNode.cs" />
+     <Compile Include="Assets\OurScripts\SendToWatch.cs" />
+     <Compile Include="Assets\OurScripts\SendToWatchTCP.cs" />
      <Compile Include="Assets\OurScripts\VoiceCommand.cs" />
      <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
      <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />

@@ -2636,6 +2636,24 @@ Transform:
   m_PrefabParentObject: {fileID: 4069920717983872, guid: b87db925ebcef2e499cc688eeb41ad0b,
     type: 2}
   m_PrefabInternal: {fileID: 274303673}
+--- !u!1 &1700660148 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1720169060207066, guid: e8a6db9b73ffdd148a95cdcb13c036c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1365139263}
+--- !u!114 &1700660149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1700660148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fd8a4d220f14814bbed00db208ff049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  host: 192.168.178.57
+  port: 52431
 --- !u!1 &1769800914
 GameObject:
   m_ObjectHideFlags: 0

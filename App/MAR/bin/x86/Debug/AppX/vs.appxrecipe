@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Max\Documents\GitHub\MAR\App\MAR\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>3A32AF6A4408D96ACF77859039037D8989F07F5DE67824F7B59DF01B1FEAC9F9</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>E0E5A203956093F70CC7C109BE7711A83A753C7B2E7EC9D7B165DE1CE586B7B7</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>Template3D_1.0.0.0_x86__pzq3xp76mxafg</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>Template3D_pzq3xp76mxafg!App</RegisteredUserModeAppID>
     <RegisteredPackageID>Template3D</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-01-25T15:40:12.564</Modified>
+      <Modified>2019-02-01T12:06:57.836</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\bin\x86\Debug\MAR.exe">
       <PackagePath>entrypoint\MAR.exe</PackagePath>
-      <Modified>2019-01-25T15:39:57.935</Modified>
+      <Modified>2019-02-01T12:06:38.839</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\.nuget\packages\microsoft.applicationinsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -501,7 +501,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Resource.res">
       <PackagePath>Resource.res</PackagePath>
-      <Modified>2019-01-25T15:39:14.886</Modified>
+      <Modified>2019-02-01T12:05:03.415</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
@@ -596,15 +596,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Data\boot.config">
       <PackagePath>Data\boot.config</PackagePath>
-      <Modified>2019-01-25T15:39:02.687</Modified>
+      <Modified>2019-02-01T12:04:52.306</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Data\globalgamemanagers">
       <PackagePath>Data\globalgamemanagers</PackagePath>
-      <Modified>2019-01-25T15:39:00.590</Modified>
+      <Modified>2019-02-01T12:04:38.669</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Data\level0">
       <PackagePath>Data\level0</PackagePath>
-      <Modified>2019-01-25T15:38:57.730</Modified>
+      <Modified>2019-02-01T12:04:36.165</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Data\Resources\unity default resources">
       <PackagePath>Data\Resources\unity default resources</PackagePath>
@@ -612,43 +612,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Data\Resources\unity_builtin_extra">
       <PackagePath>Data\Resources\unity_builtin_extra</PackagePath>
-      <Modified>2019-01-25T15:39:02.683</Modified>
+      <Modified>2019-02-01T12:04:52.306</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Data\globalgamemanagers.assets">
       <PackagePath>Data\globalgamemanagers.assets</PackagePath>
-      <Modified>2019-01-25T15:39:00.698</Modified>
+      <Modified>2019-02-01T12:04:38.796</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Data\resources.assets">
       <PackagePath>Data\resources.assets</PackagePath>
-      <Modified>2019-01-25T15:39:01.479</Modified>
+      <Modified>2019-02-01T12:04:45.476</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Data\sharedassets0.assets">
       <PackagePath>Data\sharedassets0.assets</PackagePath>
-      <Modified>2019-01-25T15:39:01.856</Modified>
+      <Modified>2019-02-01T12:04:46.380</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Data\level0.resS">
       <PackagePath>Data\level0.resS</PackagePath>
-      <Modified>2019-01-25T15:38:57.727</Modified>
+      <Modified>2019-02-01T12:04:36.159</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Data\resources.assets.resS">
       <PackagePath>Data\resources.assets.resS</PackagePath>
-      <Modified>2019-01-25T15:39:01.478</Modified>
+      <Modified>2019-02-01T12:04:45.476</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Data\sharedassets0.assets.resS">
       <PackagePath>Data\sharedassets0.assets.resS</PackagePath>
-      <Modified>2019-01-25T15:39:01.855</Modified>
+      <Modified>2019-02-01T12:04:46.380</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Data\managedAssemblies.txt">
       <PackagePath>Data\managedAssemblies.txt</PackagePath>
-      <Modified>2019-01-25T15:39:14.802</Modified>
+      <Modified>2019-02-01T12:05:03.355</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Data\nativePlugins.txt">
       <PackagePath>Data\nativePlugins.txt</PackagePath>
-      <Modified>2019-01-25T15:39:14.803</Modified>
+      <Modified>2019-02-01T12:05:03.357</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Data\sharedassets0.resource">
       <PackagePath>Data\sharedassets0.resource</PackagePath>
-      <Modified>2019-01-25T15:39:01.861</Modified>
+      <Modified>2019-02-01T12:04:46.386</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Data\StreamingAssets\Vuforia\MAR_Device.dat">
       <PackagePath>Data\StreamingAssets\Vuforia\MAR_Device.dat</PackagePath>
@@ -681,243 +681,243 @@
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-01-25T14:42:44.100</Modified>
+      <Modified>2019-02-01T12:06:39.675</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.TilemapModule.dll">
       <PackagePath>UnityEngine.TilemapModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.371</Modified>
+      <Modified>2019-02-01T12:06:51.967</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.TextRenderingModule.dll">
       <PackagePath>UnityEngine.TextRenderingModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.382</Modified>
+      <Modified>2019-02-01T12:06:51.974</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.UNETModule.dll">
       <PackagePath>UnityEngine.UNETModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.416</Modified>
+      <Modified>2019-02-01T12:06:51.996</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.UIModule.dll">
       <PackagePath>UnityEngine.UIModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.422</Modified>
+      <Modified>2019-02-01T12:06:52.006</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.UIElementsModule.dll">
       <PackagePath>UnityEngine.UIElementsModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.455</Modified>
+      <Modified>2019-02-01T12:06:52.030</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.SpriteShapeModule.dll">
       <PackagePath>UnityEngine.SpriteShapeModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.460</Modified>
+      <Modified>2019-02-01T12:06:52.036</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.SpriteMaskModule.dll">
       <PackagePath>UnityEngine.SpriteMaskModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.465</Modified>
+      <Modified>2019-02-01T12:06:52.040</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.TerrainPhysicsModule.dll">
       <PackagePath>UnityEngine.TerrainPhysicsModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.469</Modified>
+      <Modified>2019-02-01T12:06:52.040</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.TerrainModule.dll">
       <PackagePath>UnityEngine.TerrainModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.477</Modified>
+      <Modified>2019-02-01T12:06:52.050</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.StyleSheetsModule.dll">
       <PackagePath>UnityEngine.StyleSheetsModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.483</Modified>
+      <Modified>2019-02-01T12:06:52.056</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.UnityAnalyticsModule.dll">
       <PackagePath>UnityEngine.UnityAnalyticsModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.487</Modified>
+      <Modified>2019-02-01T12:06:52.060</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.WebModule.dll">
       <PackagePath>UnityEngine.WebModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.494</Modified>
+      <Modified>2019-02-01T12:06:52.060</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.VRModule.dll">
       <PackagePath>UnityEngine.VRModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.523</Modified>
+      <Modified>2019-02-01T12:06:52.075</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.VideoModule.dll">
       <PackagePath>UnityEngine.VideoModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.529</Modified>
+      <Modified>2019-02-01T12:06:52.075</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.WindModule.dll">
       <PackagePath>UnityEngine.WindModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.533</Modified>
+      <Modified>2019-02-01T12:06:52.086</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.XRModule.dll">
       <PackagePath>UnityEngine.XRModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.539</Modified>
+      <Modified>2019-02-01T12:06:52.089</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.UnityWebRequestAudioModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestAudioModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.543</Modified>
+      <Modified>2019-02-01T12:06:52.096</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.UnityWebRequestAssetBundleModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestAssetBundleModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.549</Modified>
+      <Modified>2019-02-01T12:06:52.100</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.UnityConnectModule.dll">
       <PackagePath>UnityEngine.UnityConnectModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.553</Modified>
+      <Modified>2019-02-01T12:06:52.100</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.UnityWebRequestModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.560</Modified>
+      <Modified>2019-02-01T12:06:52.110</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.VehiclesModule.dll">
       <PackagePath>UnityEngine.VehiclesModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.565</Modified>
+      <Modified>2019-02-01T12:06:52.110</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.UnityWebRequestWWWModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestWWWModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.570</Modified>
+      <Modified>2019-02-01T12:06:52.116</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.UnityWebRequestTextureModule.dll">
       <PackagePath>UnityEngine.UnityWebRequestTextureModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.574</Modified>
+      <Modified>2019-02-01T12:06:52.120</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.SharedInternalsModule.dll">
       <PackagePath>UnityEngine.SharedInternalsModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.579</Modified>
+      <Modified>2019-02-01T12:06:52.126</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.AudioModule.dll">
       <PackagePath>UnityEngine.AudioModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.588</Modified>
+      <Modified>2019-02-01T12:06:52.136</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.AssetBundleModule.dll">
       <PackagePath>UnityEngine.AssetBundleModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.594</Modified>
+      <Modified>2019-02-01T12:06:52.140</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.ARModule.dll">
       <PackagePath>UnityEngine.ARModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.602</Modified>
+      <Modified>2019-02-01T12:06:52.146</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.ClothModule.dll">
       <PackagePath>UnityEngine.ClothModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.607</Modified>
+      <Modified>2019-02-01T12:06:52.150</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.DirectorModule.dll">
       <PackagePath>UnityEngine.DirectorModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.612</Modified>
+      <Modified>2019-02-01T12:06:52.156</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.CrashReportingModule.dll">
       <PackagePath>UnityEngine.CrashReportingModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.616</Modified>
+      <Modified>2019-02-01T12:06:52.156</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.CoreModule.dll">
       <PackagePath>UnityEngine.CoreModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:10.875</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Assembly-CSharp.dll">
-      <PackagePath>Assembly-CSharp.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.158</Modified>
+      <Modified>2019-02-01T12:06:52.416</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.AccessibilityModule.dll">
       <PackagePath>UnityEngine.AccessibilityModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.162</Modified>
+      <Modified>2019-02-01T12:06:52.416</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.AnimationModule.dll">
       <PackagePath>UnityEngine.AnimationModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.176</Modified>
+      <Modified>2019-02-01T12:06:52.436</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.AIModule.dll">
       <PackagePath>UnityEngine.AIModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.183</Modified>
+      <Modified>2019-02-01T12:06:52.440</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.dll">
       <PackagePath>UnityEngine.dll</PackagePath>
-      <Modified>2019-01-25T15:39:07.111</Modified>
+      <Modified>2019-02-01T12:04:56.120</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.ParticleSystemModule.dll">
       <PackagePath>UnityEngine.ParticleSystemModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.198</Modified>
+      <Modified>2019-02-01T12:06:52.456</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.ParticlesLegacyModule.dll">
       <PackagePath>UnityEngine.ParticlesLegacyModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.202</Modified>
+      <Modified>2019-02-01T12:06:52.460</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.PerformanceReportingModule.dll">
       <PackagePath>UnityEngine.PerformanceReportingModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.206</Modified>
+      <Modified>2019-02-01T12:06:52.460</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.ScreenCaptureModule.dll">
       <PackagePath>UnityEngine.ScreenCaptureModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.211</Modified>
+      <Modified>2019-02-01T12:06:52.466</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.PhysicsModule.dll">
       <PackagePath>UnityEngine.PhysicsModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.224</Modified>
+      <Modified>2019-02-01T12:06:52.475</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.Physics2DModule.dll">
       <PackagePath>UnityEngine.Physics2DModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.238</Modified>
+      <Modified>2019-02-01T12:06:52.486</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.GridModule.dll">
       <PackagePath>UnityEngine.GridModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.243</Modified>
+      <Modified>2019-02-01T12:06:52.496</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.GameCenterModule.dll">
       <PackagePath>UnityEngine.GameCenterModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.249</Modified>
+      <Modified>2019-02-01T12:06:52.500</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.ImageConversionModule.dll">
       <PackagePath>UnityEngine.ImageConversionModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.252</Modified>
+      <Modified>2019-02-01T12:06:52.506</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.JSONSerializeModule.dll">
       <PackagePath>UnityEngine.JSONSerializeModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.256</Modified>
+      <Modified>2019-02-01T12:06:52.506</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.InputModule.dll">
       <PackagePath>UnityEngine.InputModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.261</Modified>
+      <Modified>2019-02-01T12:06:52.510</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.IMGUIModule.dll">
       <PackagePath>UnityEngine.IMGUIModule.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.277</Modified>
+      <Modified>2019-02-01T12:06:52.526</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.327</Modified>
+      <Modified>2019-02-01T12:06:52.568</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.Timeline.dll">
       <PackagePath>UnityEngine.Timeline.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.361</Modified>
+      <Modified>2019-02-01T12:06:52.606</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.UI.dll">
       <PackagePath>UnityEngine.UI.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.828</Modified>
+      <Modified>2019-02-01T12:06:52.675</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.SpatialTracking.dll">
       <PackagePath>UnityEngine.SpatialTracking.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.834</Modified>
+      <Modified>2019-02-01T12:06:52.675</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.Analytics.dll">
       <PackagePath>UnityEngine.Analytics.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.846</Modified>
+      <Modified>2019-02-01T12:06:52.686</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.HoloLens.dll">
       <PackagePath>UnityEngine.HoloLens.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.858</Modified>
+      <Modified>2019-02-01T12:06:52.696</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Vuforia.UnityExtensions.dll">
       <PackagePath>Vuforia.UnityExtensions.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.907</Modified>
+      <Modified>2019-02-01T12:06:52.740</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.StandardEvents.dll">
       <PackagePath>UnityEngine.StandardEvents.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.916</Modified>
+      <Modified>2019-02-01T12:06:52.750</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.Networking.dll">
       <PackagePath>UnityEngine.Networking.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.971</Modified>
+      <Modified>2019-02-01T12:06:52.800</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\GLTFSerializationUWP.dll">
       <PackagePath>GLTFSerializationUWP.dll</PackagePath>
-      <Modified>2019-01-25T15:40:11.996</Modified>
+      <Modified>2019-02-01T12:06:52.826</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Assembly-CSharp.dll">
+      <PackagePath>Assembly-CSharp.dll</PackagePath>
+      <Modified>2019-02-01T12:06:51.967</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\bin\x86\Debug\Core\MAR.exe">
       <PackagePath>MAR.exe</PackagePath>
-      <Modified>2019-01-25T15:40:12.554</Modified>
+      <Modified>2019-02-01T12:06:57.826</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -270,9 +270,6 @@
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>.\Unprocessed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>.\Unprocessed\Assembly-CSharp.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.AccessibilityModule">
       <HintPath>.\Unprocessed\UnityEngine.AccessibilityModule.dll</HintPath>
     </Reference>
@@ -375,7 +372,14 @@
     </AppxManifest>
     <None Include="WSATestCertificate.pfx" />
   </ItemGroup>
+
   <ItemGroup>
+    <ProjectReference Include="C:\Users\Max\Documents\GitHub\MAR\App\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj">
+      <Project>{1c96c6c5-3f50-4a11-91ee-c89c4970f81e}</Project>
+      <Name>Assembly-CSharp</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>  <ItemGroup>
     <Reference Include="UnityPlayer">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(UnityWSAPlayerDir)Players\UAP\dotnet\$(PlatformTarget)\$(Configuration)\UnityPlayer.winmd</HintPath>
@@ -459,6 +463,8 @@
         <Message Importance="high" Text="UnityProjectDir &quot;$(UnityProjectDir)&quot;." />
         <Message Importance="high" Text="Copying unprocessed assemblies..." />
         <Copy SourceFiles="@(UnprocessedFile)" DestinationFolder="$(ProjectDir)" />
+        <Copy SourceFiles="$(UnityWSASolutionDir)\GeneratedProjects\UWP\Assembly-CSharp\bin\$(PlatformName)\$(ConfigurationName)\Assembly-CSharp.dll" DestinationFiles="$(ProjectDir)Assembly-CSharp.dll" />
+        <Copy SourceFiles="$(UnityWSASolutionDir)\GeneratedProjects\UWP\Assembly-CSharp\bin\$(PlatformName)\$(ConfigurationName)\Assembly-CSharp.pdb" DestinationFiles="$(ProjectDir)Assembly-CSharp.pdb" Condition="Exists('$(UnityWSASolutionDir)\GeneratedProjects\UWP\Assembly-CSharp\bin\$(PlatformName)\$(ConfigurationName)\Assembly-CSharp.pdb')" />
         <PropertyGroup Condition=" '$(Configuration)' == 'Master' ">
            <RemoveDebuggableAttribute>True</RemoveDebuggableAttribute>
         </PropertyGroup>
@@ -718,14 +724,6 @@
             <AppxPackagePayload Include="$(ProjectDir)UnityEngine.CoreModule.pdb">
                 <TargetPath>UnityEngine.CoreModule.pdb</TargetPath>
             </AppxPackagePayload>
-            <AppxPackagePayload Remove="@(AppxPackagePayload)" Condition="'%(TargetPath)' == 'Assembly-CSharp.dll'" />
-            <AppxPackagePayload Include="$(ProjectDir)Assembly-CSharp.dll">
-                <TargetPath>Assembly-CSharp.dll</TargetPath>
-            </AppxPackagePayload>
-            <AppxPackagePayload Remove="@(AppxPackagePayload)" Condition="'%(TargetPath)' == 'Assembly-CSharp.pdb'" />
-            <AppxPackagePayload Include="$(ProjectDir)Assembly-CSharp.pdb">
-                <TargetPath>Assembly-CSharp.pdb</TargetPath>
-            </AppxPackagePayload>
             <AppxPackagePayload Remove="@(AppxPackagePayload)" Condition="'%(TargetPath)' == 'UnityEngine.AccessibilityModule.dll'" />
             <AppxPackagePayload Include="$(ProjectDir)UnityEngine.AccessibilityModule.dll">
                 <TargetPath>UnityEngine.AccessibilityModule.dll</TargetPath>
@@ -933,6 +931,14 @@
             <AppxPackagePayload Remove="@(AppxPackagePayload)" Condition="'%(TargetPath)' == 'GLTFSerializationUWP.pdb'" />
             <AppxPackagePayload Include="$(ProjectDir)GLTFSerializationUWP.pdb">
                 <TargetPath>GLTFSerializationUWP.pdb</TargetPath>
+            </AppxPackagePayload>
+            <AppxPackagePayload Remove="@(AppxPackagePayload)" Condition="'%(TargetPath)' == 'Assembly-CSharp.dll'" />
+            <AppxPackagePayload Include="$(ProjectDir)Assembly-CSharp.dll">
+                <TargetPath>Assembly-CSharp.dll</TargetPath>
+            </AppxPackagePayload>
+            <AppxPackagePayload Remove="@(AppxPackagePayload)" Condition="'%(TargetPath)' == 'Assembly-CSharp.pdb'" />
+            <AppxPackagePayload Include="$(ProjectDir)Assembly-CSharp.pdb">
+                <TargetPath>Assembly-CSharp.pdb</TargetPath>
             </AppxPackagePayload>
         </ItemGroup>
    </Target>

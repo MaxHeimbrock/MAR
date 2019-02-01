@@ -1,4 +1,5 @@
 -lock=project.lock.json
+Assembly-CSharp.dll
 UnityEngine.TilemapModule.dll
 UnityEngine.TextRenderingModule.dll
 UnityEngine.UNETModule.dll
@@ -30,7 +31,6 @@ UnityEngine.ClothModule.dll
 UnityEngine.DirectorModule.dll
 UnityEngine.CrashReportingModule.dll
 UnityEngine.CoreModule.dll
-Assembly-CSharp.dll
 UnityEngine.AccessibilityModule.dll
 UnityEngine.AnimationModule.dll
 UnityEngine.AIModule.dll

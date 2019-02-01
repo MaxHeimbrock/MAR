@@ -622,5 +622,3 @@ C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\qualifiers.txt
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\ProjectArchitectures.txt
-C:\Users\Max\Documents\GitHub\MAR\App\MAR\bin\x86\Debug\Assembly-CSharp.dll
-C:\Users\Max\Documents\GitHub\MAR\App\MAR\bin\x86\Debug\Assembly-CSharp.pdb
