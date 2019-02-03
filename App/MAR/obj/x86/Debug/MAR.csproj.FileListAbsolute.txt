@@ -552,7 +552,6 @@ C:\Users\Max\Documents\GitHub\MAR\App\MAR\bin\x86\Debug\BridgeInterface.pdb
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\bin\x86\Debug\UnityEngineDelegates.dll
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\bin\x86\Debug\UnityEngineDelegates.pdb
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\bin\x86\Debug\UnityEngineProxy.pdb
-C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\MAR.csprojResolveAssemblyReference.cache
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\MAR.csproj.CoreCompileInputs.cache
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\MAR.exe
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\MAR.pdb
@@ -612,8 +611,6 @@ C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\FxResources.System.Xml.X
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\FxResources.System.Xml.XmlSerializer.SR.resw
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\priconfig.xml
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\priconfig.xml.intermediate
-C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\layout.resfiles
-C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\layout.resfiles.intermediate
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\resources.resfiles
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\resources.resfiles.intermediate
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\pri.resfiles
@@ -622,3 +619,15 @@ C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\qualifiers.txt
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\MAR.csprojAssemblyReference.cache
+C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\MAR.csproj.CopyComplete
+C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\unfiltered.layout.resfiles
+C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\unfiltered.layout.resfiles.intermediate
+C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\filtered.layout.resfiles
+C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\filtered.layout.resfiles.intermediate
+C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\excluded.layout.resfiles
+C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\excluded.layout.resfiles.intermediate
+C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\.winmd_cache\$BridgeInterface.winmd_636604606260000000.json
+C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\.winmd_cache\$UnityEngineDelegates.winmd_636604606280000000.json
+C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\.winmd_cache\$UnityPlayer.winmd_636604606300000000.json
+C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\.winmd_cache\$WinRTBridge.winmd_636604606320000000.json

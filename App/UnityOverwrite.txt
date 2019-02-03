@@ -7,9 +7,9 @@
 # Default behavior is to never overwrite files
 MAR.sln: modified
 GeneratedProjects\UWP\Assembly-CSharp\project.json: 1D02BC64BAC0D041019673A1C4C51737
-MAR\App.cs: 344F6CB53ECF9845DAB79F15ADF73921
+MAR\App.cs: modified
 MAR\AssemblyConverterArgs.txt: E2486C3E3B611A7B702E84645AD7520B
-MAR\MAR.csproj: E2372167C84283F5598F1FCDD48046D7
+MAR\MAR.csproj: 9AE16089963D88EB92A247A4E792AB7B
 MAR\MAR.csproj.user: modified
 MAR\Package.appxmanifest: modified
 MAR\project.json: 1D02BC64BAC0D041019673A1C4C51737

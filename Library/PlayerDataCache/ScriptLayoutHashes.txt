@@ -117,8 +117,6 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 f89a8d78d1b7569984dadda2f4e9c975 Assembly-CSharp.dll:HoloToolkit.Unity.UX.AppBar
 83919fb5f9d7e5441069b9286488fa33 Assembly-CSharp.dll:HoloToolkit.Unity.UX.DistorterSimplex
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Sharing.DefaultSyncModelAccessor
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HandTracking
-40461da3b3384128136b8053ca6b17c6 Assembly-CSharp.dll:.SendToWatchTCP
 2aa413f79a7ac9510ed7b68022c9e200 Assembly-CSharp.dll:HoloToolkit.Unity.UX.LineUnity
 917c688892e418a03fefb51e61b1622c Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.MixedRealityCameraManager
 06b78688ddd32fd8e636842d5ee81e27 Assembly-CSharp.dll:HoloToolkit.Unity.SpatialMapping.FileSurfaceObserver
@@ -271,7 +269,6 @@ cb3299cc3a2d8ae01f30f501bb96d4cf Assembly-CSharp.dll:HoloToolkit.Unity.InputModu
 060048163841f486acb147d2ead9eea2 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.ButtonController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.TimerScheduler
 86850bb803420472cf9bdf34ef5b7e0f Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.CustomInputSource
-9e0fa6a7dd4a16469dd5d3edecdb3f84 Assembly-CSharp.dll:.PathNode
 066f3c01e7c10bfbdc9fc130998d1d40 Assembly-CSharp.dll:HoloToolkit.Sharing.Spawning.PrefabSpawnManager
 3653e647f40c0f295672219cc1e7ebff Assembly-CSharp.dll:HoloToolkit.Unity.Buttons.SpriteButton
 c4fd2ef7468c68e11d03e50c6e8b323d Assembly-CSharp.dll:HoloToolkit.Unity.Buttons.AnimButton
@@ -343,7 +340,6 @@ c1ac6462c82be12ebeffcf18f5562cce Assembly-CSharp.dll:HoloToolkit.Unity.NearPlane
 f02726adeff0a3ec5905565234b372da UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
 dcd03b8c3fdf7f3a189ae064a436ad12 Assembly-CSharp.dll:HoloToolkit.Unity.GpuTimingCamera
-f77468017e268d357a3d0a7a3531c52d Assembly-CSharp.dll:.SendToWatch
 9e0ef5bf862444b5dc48b5a99554ce7c UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
@@ -356,7 +352,6 @@ e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
 285633907524bc7977e26fc04b897e9a Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.AnimatedCursor
 f7cf9e253f09e4ec8daa4fc98b6daae3 Assembly-CSharp.dll:HoloToolkit.UI.Keyboard.KeyboardInputField
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.cameraSkript
 af4ae9a3d9778026e545c5b641928c70 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.CameraMotionInfo
 e6857e57e5f774d089533f27a4a00016 Assembly-CSharp.dll:HoloToolkit.Unity.Buttons.CompoundButtonIcon
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
@@ -479,3 +474,8 @@ a924c90a95cf65003f662aa5e30abb6b Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 01e6f145049f3a676df6dc247eabf176 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HandTracking
+40461da3b3384128136b8053ca6b17c6 Assembly-CSharp.dll:.SendToWatchTCP
+f77468017e268d357a3d0a7a3531c52d Assembly-CSharp.dll:.SendToWatch
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.cameraSkript
+9e0fa6a7dd4a16469dd5d3edecdb3f84 Assembly-CSharp.dll:.PathNode
