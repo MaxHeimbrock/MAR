@@ -104,7 +104,7 @@ public class SendToWatchTCP : MonoBehaviour
         catch (Exception e)
         {
             errorStatus = e.ToString();
-            Debug.Log("error in TCP script " + errorStatus);
+            Debug.Log("Apple Watch App nicht bereit - TCP-Verbindung nicht angenommen");
         }
 #endif
     }

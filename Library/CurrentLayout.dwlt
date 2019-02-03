@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 492}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_MinSize: {x: 911, y: 442}
   m_MaxSize: {x: 22006, y: 10021}
   vertical: 0
-  controlID: 34
+  controlID: 77
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 35
+  controlID: 11
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,8 +154,8 @@ MonoBehaviour:
     y: 0
     width: 585
     height: 524
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -297,8 +297,8 @@ MonoBehaviour:
     m_VRangeLocked: 0
     m_HBaseRangeMin: -291.5
     m_HBaseRangeMax: 291.5
-    m_VBaseRangeMin: -228.5
-    m_VBaseRangeMax: 228.5
+    m_VBaseRangeMin: -182.1875
+    m_VBaseRangeMax: 182.1875
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -363,14 +363,14 @@ MonoBehaviour:
     height: 503
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 6570.357006163602
+  lastFramingTime: 1401.7070985722808
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.5700989, y: -0.45404053, z: -0.32196045}
+    m_Target: {x: -0.79138184, y: 0.095825195, z: -1.6212158}
     speed: 2
-    m_Value: {x: -3.5700989, y: -0.45404053, z: -0.32196045}
+    m_Value: {x: -0.79138184, y: 0.095825195, z: -1.6212158}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -398,13 +398,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.10538961, y: 0.89187884, z: -0.34581947, w: 0.2717854}
+    m_Target: {x: -0.09951542, y: 0.7562754, z: -0.118544854, w: -0.63575697}
     speed: 2
-    m_Value: {x: 0.10538962, y: 0.89187884, z: -0.3458195, w: 0.2717854}
+    m_Value: {x: -0.09951067, y: 0.75623924, z: -0.118539184, w: -0.6357266}
   m_Size:
-    m_Target: 0.7520844
+    m_Target: 1.1012529
     speed: 2
-    m_Value: 0.7520844
+    m_Value: 1.1012529
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -485,9 +485,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f2080000
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: eafbffff00000000
+    m_ExpandedIDs: 540dffff4e0effffec11ffff0426fffffe26ffff9e2affffdafbffff000000006e600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -548,20 +548,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/OurScripts
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/OurScripts
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Max\Documents\GitHub\MAR
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 701f0000
-    m_LastClickedID: 8048
-    m_ExpandedIDs: 00000000441b0000ac20000054210000942100006a220000a8220000042300005a2300006623000000ca9a3bffffff7f
+    m_SelectedIDs: 541b0000
+    m_LastClickedID: 6996
+    m_ExpandedIDs: 00000000541b0000bc20000064210000a42100007a220000b8220000142300006a2300007623000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -589,7 +589,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000441b0000ac20000054210000942100006a220000a8220000042300005a23000066230000
+    m_ExpandedIDs: 00000000541b0000bc20000064210000a42100007a220000b8220000142300006a23000076230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -616,7 +616,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: f2230000ca23000070220000540a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

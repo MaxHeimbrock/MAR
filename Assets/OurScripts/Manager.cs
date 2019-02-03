@@ -44,6 +44,8 @@ public class Manager : MonoBehaviour
     void Start()
     {
         sendToWatch = GetComponent<SendToWatchTCP>();
+        sendToWatch.StartConnection();
+
         dijkstra = new Dijkstra();
 
         GameObject[] waypoints = GameObject.FindGameObjectsWithTag("waypoint");
@@ -119,7 +121,6 @@ public class Manager : MonoBehaviour
 
     public void ResetDemo()
     {
-        sendToWatch.StartConnection();
         sendToWatch.SetFrequency(-1.0f);
 
         if (currentState == State.PathNavigation)
@@ -178,7 +179,7 @@ public class Manager : MonoBehaviour
 
         return result;
     }
-
+    
     #endregion 
 
     #region State Changes from VoiceCommand or Vuforia

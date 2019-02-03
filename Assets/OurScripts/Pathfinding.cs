@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Pathfinding : MonoBehaviour
 {
-
     public GameObject[] allWaypoints;
     private int[] path;
     int activeWaypoint;
@@ -67,6 +66,7 @@ public class Pathfinding : MonoBehaviour
     {
         active = true;
         allWaypoints[path[activeWaypoint]].SetActive(true);
+        allWaypoints[path[activeWaypoint]].GetComponent<MeshRenderer>().enabled = true;
         allWaypoints[path[activeWaypoint]].GetComponent<AudioSource>().Play();
     }
 
@@ -75,6 +75,7 @@ public class Pathfinding : MonoBehaviour
     {
         active = false;
         allWaypoints[path[activeWaypoint]].SetActive(false);
+        allWaypoints[path[activeWaypoint]].GetComponent<MeshRenderer>().enabled = false;
         allWaypoints[path[activeWaypoint]].GetComponent<AudioSource>().Stop();
     }
 

@@ -375,7 +375,7 @@
 
   <ItemGroup>
     <ProjectReference Include="C:\Users\Max\Documents\GitHub\MAR\App\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj">
-      <Project>{1c96c6c5-3f50-4a11-91ee-c89c4970f81e}</Project>
+      <Project>{1e20814b-7d2f-4a19-826f-f90dd71e8bb8}</Project>
       <Name>Assembly-CSharp</Name>
       <Private>False</Private>
     </ProjectReference>
