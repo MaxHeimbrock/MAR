@@ -52,12 +52,12 @@ public class Dijkstra {
                     if (currentNeighbor == goal)
                     {
                         Debug.Log("Dijkstra found shortest path.");
-                        pathfinding.SetPath(CreatePathArray(pathToNode[currentWaypoint] + goal), allWaypoints);
+                        pathfinding.SetPath(CreatePathArray(pathToNode[currentWaypoint] + "," + goal), allWaypoints);
                         return;
                     }
                     if (pathToNode[currentNeighbor] == null)
                     {
-                        pathToNode[currentNeighbor] = pathToNode[currentWaypoint] + currentNeighbor;
+                        pathToNode[currentNeighbor] = pathToNode[currentWaypoint] + "," + currentNeighbor;
                         waitingNodes.Enqueue(currentNeighbor);
                     }
                 }
@@ -71,7 +71,7 @@ public class Dijkstra {
         Vector2 camPos2D = new Vector2(camPos.position.x, camPos.position.z);
         float minDistance = float.MaxValue;
         int closestWaypoint = -1;
-        for (int i = 0; i < allWaypoints.Length; i++)
+        for (int i = 1; i < allWaypoints.Length; i++)
         {
             Vector2 waypointPos2D = new Vector2(allWaypoints[i].transform.position.x, allWaypoints[i].transform.position.z);
             float currentDistance = Vector2.Distance(camPos2D, waypointPos2D);
@@ -80,18 +80,24 @@ public class Dijkstra {
                 minDistance = currentDistance;
                 closestWaypoint = i;
             }
+            Debug.Log("Closest waypoint: " + closestWaypoint + " Distance: " + minDistance);
         }
+        Debug.Log(camPos2D);
         Debug.Log(minDistance);
+        Debug.Log(allWaypoints[closestWaypoint].transform.position.x + " " + allWaypoints[closestWaypoint].transform.position.y + " " + allWaypoints[closestWaypoint].transform.position.z);
         return closestWaypoint;
     }
 
     int[] CreatePathArray(string stringPath)
     {
-        int[] path = new int[stringPath.Length];
-        for(int i = 0; i < path.Length; i++)
+        Debug.Log("Test: " + stringPath);
+        String[] pathArray = stringPath.Split(',');
+        int[] path = new int[pathArray.Length];
+        for (int i = 0; i < path.Length; i++)
         {
-            path[i] = Int32.Parse(stringPath[i].ToString());
+            path[i] = Int32.Parse(pathArray[i]);
         }
+        Debug.Log("Final Array: " + path);
         return path;
     }
 }

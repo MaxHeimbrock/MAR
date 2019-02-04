@@ -7,8 +7,6 @@ using UnityEngine.Windows.Speech;
 
 public class VoiceCommand : MonoBehaviour
 {
-    public GameObject billboard;
-    Pathfinding pathfinding;
     private KeywordRecognizer keywordRecognizer;
     private Dictionary<string, Action> actions = new Dictionary<string, Action>();
 
@@ -41,13 +39,21 @@ public class VoiceCommand : MonoBehaviour
         
         actions.Add("blue milk", SetMilkBlueAsProduct);
         actions.Add("Unser Land Milch", SetMilkBlueAsProduct);
+        actions.Add("milk blue", SetMilkBlueAsProduct);
         actions.Add("green milk", SetMilkGreenAsProduct);
+        actions.Add("milk green", SetMilkGreenAsProduct);
         actions.Add("corny", SetCornyAsProduct);
         actions.Add("cookies", SetCookieAsProduct);
 
         actions.Add("Start Demo", manager.StartDemo);
+
         actions.Add("Reset Demo", manager.ResetDemo);
+        actions.Add("Restart Demo", manager.ResetDemo);
+
         actions.Add("manual step", manager.ManualStep);
+        actions.Add("step", manager.ManualStep);
+        actions.Add("forward", manager.ManualStep);
+        actions.Add("next", manager.ManualStep);
 
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += RecognizeSpeech;
