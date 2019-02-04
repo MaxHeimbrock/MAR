@@ -631,3 +631,5 @@ C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\.winmd_cache\$BridgeInte
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\.winmd_cache\$UnityEngineDelegates.winmd_636604606280000000.json
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\.winmd_cache\$UnityPlayer.winmd_636604606300000000.json
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\.winmd_cache\$WinRTBridge.winmd_636604606320000000.json
+C:\Users\Max\Documents\GitHub\MAR\App\MAR\bin\x86\Debug\Assembly-CSharp.dll
+C:\Users\Max\Documents\GitHub\MAR\App\MAR\bin\x86\Debug\Assembly-CSharp.pdb

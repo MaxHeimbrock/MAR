@@ -21,6 +21,25 @@ public class VoiceCommand : MonoBehaviour
 
     void Start()
     {
+        #region dairy products
+        actions.Add("Dairy products", SetPathToDairyProducts);
+        actions.Add("I need milk", SetPathToDairyProducts);
+        actions.Add("I want milk", SetPathToDairyProducts);
+        actions.Add("buy milk", SetPathToDairyProducts);
+        actions.Add("I want to buy milk", SetPathToDairyProducts);
+        actions.Add("I am looking for milk", SetPathToDairyProducts);
+        #endregion
+
+        #region snacks
+        actions.Add("I need snacks", SetPathToSnacks);
+        actions.Add("Snacks", SetPathToSnacks);
+        actions.Add("I want snacks", SetPathToSnacks);
+        actions.Add("I need snacks", SetPathToSnacks);
+        actions.Add("I want to buy snacks", SetPathToSnacks);
+        actions.Add("I want to buy corny", SetPathToSnacks);
+        actions.Add("I want to buy cookies", SetPathToSnacks);
+        #endregion
+        
         actions.Add("blue milk", SetMilkBlueAsProduct);
         actions.Add("Unser Land Milch", SetMilkBlueAsProduct);
         actions.Add("green milk", SetMilkGreenAsProduct);

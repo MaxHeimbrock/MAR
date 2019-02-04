@@ -619,6 +619,7 @@
     <None Include="Assets\HoloToolkit\MRTKVersion.txt" />
     <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFStandard.shader" />
     <None Include="Assets\HoloToolkit\SpatialUnderstanding\Materials\SpatialMappingSurface.shader" />
+    <None Include="Assets\StreamingAssets\Vuforia\MAR_Device.xml" />
     <None Include="Assets\HoloToolkit\UX\Shaders\Normal-Diffuse.shader" />
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\LambertianConfigurableTransparent.shader" />
     <None Include="Assets\HoloToolkit\UX\Shaders\InvisibleShader.shader" />
@@ -641,7 +642,6 @@
     <None Include="Assets\HoloToolkit\UX\Shaders\MovieMask.shader" />
     <None Include="Assets\HoloToolkit\UX\Shaders\StereoImage.shader" />
     <None Include="Assets\HoloToolkit\License.txt" />
-    <None Include="Assets\StreamingAssets\Vuforia\MAR_Device.xml" />
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\BlinnPhongConfigurable.shader" />
     <None Include="Assets\HoloToolkit\UX\Shaders\LuminousUnity.shader" />
     <None Include="Assets\HoloToolkit\Common\Shaders\WindowOcclusion.shader" />

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="possibleAnchor" size="0.140000 0.139634" />
     <ImageTarget name="Keks_1" size="0.225000 0.062906" />
     <ImageTarget name="UL_Milk_1" size="0.070000 0.194503" />
     <ImageTarget name="BL_Milk_1" size="0.075000 0.192306" />

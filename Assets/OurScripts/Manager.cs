@@ -12,7 +12,7 @@ public class Manager : MonoBehaviour
 
     // For Audio I/O
     AudioSource audioSource;
-    public VoiceCommand voiceCommand;
+    private VoiceCommand voiceCommand;
     public AudioClip whichSectionAudioFile;
     public AudioClip whichProductAudioFile;
     public AudioClip touchedSound;
@@ -21,7 +21,7 @@ public class Manager : MonoBehaviour
 
     // States
     public enum State { FindAnchor, ReadyToStart, SectionSelection, PathNavigation, ProductSelection, ProductTracking, ProductFound, ProductTouched};
-    public enum Section { Init, Dairy = 5, Snacks = 7 }; 
+    public enum Section { Init, Dairy = 14, Snacks = 7 }; 
     public enum Product { Init, Corny, Cookie, MilkBlue, MilkGreen };
     State currentState;
     Section currentSection;
@@ -44,7 +44,11 @@ public class Manager : MonoBehaviour
     void Start()
     {
         sendToWatch = GetComponent<SendToWatchTCP>();
-        sendToWatch.StartConnection();
+
+        // ToDo: Hier auskommentiert zum Debug
+        //sendToWatch.StartConnection();
+
+        voiceCommand = GetComponent<VoiceCommand>();
 
         dijkstra = new Dijkstra();
 
@@ -175,7 +179,6 @@ public class Manager : MonoBehaviour
         {
             ProductTouched();
         }
-
 
         return result;
     }

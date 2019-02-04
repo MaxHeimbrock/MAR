@@ -605,6 +605,9 @@
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.CoreModule.dll">
       <PackagePath>UnityEngine.CoreModule.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Assembly-CSharp.dll">
+      <PackagePath>Assembly-CSharp.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\UnityEngine.AccessibilityModule.dll">
       <PackagePath>UnityEngine.AccessibilityModule.dll</PackagePath>
     </AppxPackagedFile>
@@ -682,9 +685,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\GLTFSerializationUWP.dll">
       <PackagePath>GLTFSerializationUWP.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\Assembly-CSharp.dll">
-      <PackagePath>Assembly-CSharp.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Max\Documents\GitHub\MAR\App\MAR\bin\x86\Debug\Core\MAR.exe">
       <PackagePath>MAR.exe</PackagePath>
