@@ -282,7 +282,8 @@ public class Manager : MonoBehaviour
                 break;
 
             case State.SectionSelection:
-                SetPath(Section.Snacks);
+                SetPath(Section.Dairy);
+                //SetPath(Section.Snacks);
                 break;
 
             case State.PathNavigation:
@@ -291,11 +292,13 @@ public class Manager : MonoBehaviour
                 break;
 
             case State.ProductSelection:
-                SetProduct(Product.Corny);
+                //SetProduct(Product.Corny);
+                SetProduct(Product.MilkBlue);
                 break;
 
             case State.ProductTracking:
-                ActivateProduct(Product.Corny);
+                //ActivateProduct(Product.Corny);
+                ActivateProduct(Product.MilkBlue);
                 break;
 
             case State.ProductFound:

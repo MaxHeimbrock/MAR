@@ -34,7 +34,6 @@ public class VoiceCommand : MonoBehaviour
         actions.Add("I need snacks", SetPathToSnacks);
         actions.Add("Snacks", SetPathToSnacks);
         actions.Add("I want snacks", SetPathToSnacks);
-        actions.Add("I need snacks", SetPathToSnacks);
         actions.Add("I want to buy snacks", SetPathToSnacks);
         actions.Add("I want to buy corny", SetPathToSnacks);
         actions.Add("I want to buy cookies", SetPathToSnacks);
@@ -47,8 +46,6 @@ public class VoiceCommand : MonoBehaviour
         actions.Add("cookies", SetCookieAsProduct);
 
         actions.Add("Start Demo", manager.StartDemo);
-        actions.Add("Dairy Products", SetPathToDairyProducts);
-        actions.Add("Snacks", SetPathToSnacks);
         actions.Add("Reset Demo", manager.ResetDemo);
         actions.Add("manual step", manager.ManualStep);
 

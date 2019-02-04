@@ -94,6 +94,10 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
                 manager.PosterFound();
                 break;
 
+            case "possibleAnchor":
+                manager.PosterFound();
+                break;
+
             case "CornyMarker":
                 manager.ActivateProduct(Manager.Product.Corny);
                 break;

@@ -572,7 +572,6 @@
     <Compile Include="Assets\HoloToolkit\UX\Scripts\UsabilityScaler.cs" />
     <Compile Include="Assets\HoloToolkit\UX\Scripts\UsabilityUtilities.cs" />
     <Compile Include="Assets\OurScripts\cameraSkript.cs" />
-    <Compile Include="Assets\OurScripts\CollisionAvoidance.cs" />
     <Compile Include="Assets\OurScripts\Dijkstra.cs" />
     <Compile Include="Assets\OurScripts\HandTracking.cs" />
     <Compile Include="Assets\OurScripts\Manager.cs" />

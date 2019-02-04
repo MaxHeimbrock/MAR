@@ -55,7 +55,7 @@ public class Pathfinding : MonoBehaviour
 
         Vector2 waypoint2D = new Vector2(allWaypoints[path[activeWaypoint]].transform.position.x, allWaypoints[path[activeWaypoint]].transform.position.z);
 
-        if (Vector2.Distance(camPos2D, waypoint2D) < 0.3)
+        if (Vector2.Distance(camPos2D, waypoint2D) < 10)
         {
             WaypointReached();
         }
@@ -66,7 +66,9 @@ public class Pathfinding : MonoBehaviour
     {
         active = true;
         allWaypoints[path[activeWaypoint]].SetActive(true);
-        allWaypoints[path[activeWaypoint]].GetComponent<MeshRenderer>().enabled = true;
+        MeshRenderer[] renderers =  allWaypoints[path[activeWaypoint]].GetComponentsInChildren<MeshRenderer>();
+        foreach (MeshRenderer mr in renderers)
+            mr.enabled = true;
         allWaypoints[path[activeWaypoint]].GetComponent<AudioSource>().Play();
     }
 
@@ -75,7 +77,9 @@ public class Pathfinding : MonoBehaviour
     {
         active = false;
         allWaypoints[path[activeWaypoint]].SetActive(false);
-        allWaypoints[path[activeWaypoint]].GetComponent<MeshRenderer>().enabled = false;
+        MeshRenderer[] renderers = allWaypoints[path[activeWaypoint]].GetComponentsInChildren<MeshRenderer>();
+        foreach (MeshRenderer mr in renderers)
+            mr.enabled = false;
         allWaypoints[path[activeWaypoint]].GetComponent<AudioSource>().Stop();
     }
 
