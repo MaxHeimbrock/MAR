@@ -2,11 +2,11 @@ Metro
 PlayerPath?
 C:/Users/Max/Documents/GitHub/MAR/App
 SceneListBegin?
-Assets/Scenes/Blütenstraße - Kopie.unity
+Assets/Scenes/Garching.unity
 SceneListEnd?
 7abde016883951c4ca4e7c44ce6adb2c Assembly-CSharp.dll:HoloToolkit.Unity.SceneLauncher
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.UX.BoundingBoxGizmoHandle
-8e3d4d53d09404f66d7584aace95b2df Assembly-CSharp.dll:.Manager
+900543dc5c2fcc0dbae601e51092c408 Assembly-CSharp.dll:.Manager
 c435bd06b74bbebac563a6d81dae369c Assembly-CSharp.dll:HoloToolkit.Unity.CanvasHelper
 6dcd5512ea7912a6bfb5a8bc726e3049 Assembly-CSharp.dll:HoloToolkit.Unity.UX.Bezier
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:HoloToolkit.Unity.FadeScript
@@ -80,7 +80,7 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 a33037253cd01a5bfd05db4cf8688db5 Assembly-CSharp.dll:HoloToolkit.UI.Keyboard.AxisSlider
 e6fccba36520b6f5f4d5fedef26a9841 Assembly-CSharp.dll:HoloToolkit.Unity.Billboard
-8b4a13aacf51d2478cc17823422f9f70 Assembly-CSharp.dll:.VoiceCommand
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.VoiceCommand
 b3823de281e428cf0dba1153469ff4ab Assembly-CSharp.dll:HoloToolkit.Unity.SphereBasedTagalong
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput

@@ -18,10 +18,11 @@ public class Manager : MonoBehaviour
     public AudioClip touchedSound;
     public AudioClip startDemo;
     public AudioClip smallBell;
+    public AudioClip goToCashierAudio;
 
     // States
-    public enum State { FindAnchor, ReadyToStart, SectionSelection, PathNavigation, ProductSelection, ProductTracking, ProductFound, ProductTouched};
-    public enum Section { Init, Dairy = 14, Snacks = 7 }; 
+    public enum State { FindAnchor, ReadyToStart, SectionSelection, PathNavigation, ProductSelection, ProductTracking, ProductFound, ProductInBasket, GoToCashier, Finished};
+    public enum Section { Init, Dairy = 13, Snacks = 9 }; 
     public enum Product { Init, Corny, Cookie, MilkBlue, MilkGreen };
     State currentState;
     Section currentSection;
@@ -46,7 +47,7 @@ public class Manager : MonoBehaviour
         sendToWatch = GetComponent<SendToWatchTCP>();
 
         // ToDo: Hier auskommentiert zum Debug
-        sendToWatch.StartConnection();
+        //sendToWatch.StartConnection();
 
         voiceCommand = GetComponent<VoiceCommand>();
 
@@ -106,7 +107,14 @@ public class Manager : MonoBehaviour
                 distanceToProduct = HandProductDistance();
                 break;
 
-            case State.ProductTouched:
+            case State.GoToCashier:
+                break;
+
+            case State.ProductInBasket:
+                break;
+
+            case State.Finished:
+                ResetDemo();
                 break;
         }
     }
@@ -130,6 +138,9 @@ public class Manager : MonoBehaviour
         if (currentState == State.PathNavigation)
             GetComponent<Pathfinding>().Deactivate();
 
+        if (currentState == State.GoToCashier)
+            GetComponent<Pathfinding>().Deactivate();
+
         if (currentState != State.FindAnchor)
         {
             currentState = State.FindAnchor;
@@ -144,6 +155,26 @@ public class Manager : MonoBehaviour
 
         if (currentProduct != Product.Init)
             products[(int)currentProduct - 1].GetComponent<AudioSource>().Stop();
+    }
+
+    public void ResetShopping()
+    {
+        if (currentState == State.ProductInBasket)
+        {
+            sendToWatch.SetFrequency(-1.0f);
+
+            currentState = State.SectionSelection;
+
+            currentSection = Section.Init;
+            currentProduct = Product.Init;
+
+            handPos = new Vector3(0, 0, 0);
+            distanceToProduct = 0.0f;
+
+            if (currentProduct != Product.Init)
+                products[(int)currentProduct - 1].GetComponent<AudioSource>().Stop();
+
+        }
     }
 
     public void StartDemo()
@@ -175,7 +206,8 @@ public class Manager : MonoBehaviour
             sendToWatch.SetFrequency(distanceToProduct);
         }
 
-        if (result < 0.07f)
+        // ToDo: Find right distance
+        if (result < 0.2f)
         {
             ProductTouched();
         }
@@ -216,6 +248,11 @@ public class Manager : MonoBehaviour
 
             audioSource.clip = whichProductAudioFile;
             audioSource.Play(0);
+        }
+
+        if (currentState == State.GoToCashier)
+        {
+            GoToNextState();
         }
     }
 
@@ -259,12 +296,31 @@ public class Manager : MonoBehaviour
     {
         products[(int)currentProduct - 1].GetComponent<AudioSource>().Stop();
         
-        audioSource.clip = touchedSound;
+        audioSource.clip = goToCashierAudio;
         audioSource.Play(0);
+
+        // ToDo: loop?
 
         sendToWatch.SetFrequency(-1.0f);
 
         GoToNextState();
+    }
+
+    public void GoToCashier()
+    {
+        if (currentState == State.ProductInBasket)
+        {
+            dijkstra.FindPathToGoal(0);
+            GoToNextState();
+        }
+    }
+
+    public void ContinueShopping()
+    {
+        if (currentState == State.ProductInBasket)
+        {
+            ResetShopping();
+        }
     }
 
     #endregion
@@ -303,6 +359,14 @@ public class Manager : MonoBehaviour
 
             case State.ProductFound:
                 ProductTouched();
+                break;
+
+            case State.ProductInBasket:
+                GoToCashier();
+                break;
+
+            case State.GoToCashier:
+                ResetDemo();
                 break;
         }
     }

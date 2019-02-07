@@ -31,7 +31,7 @@ public class cameraSkript : MonoBehaviour {
 
     #region Movement from https://answers.unity.com/questions/568936/how-to-active-mesh-renderer-with-a-script-c.html
 
-    float mainSpeed = 100.0f; //regular speed
+    float mainSpeed = 5.0f; //regular speed
     float shiftAdd = 250.0f; //multiplied by how long shift is held.  Basically running
     float maxShift = 1000.0f; //Maximum speed when holdin gshift
     float camSens = 0.25f; //How sensitive it with mouse

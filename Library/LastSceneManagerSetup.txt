@@ -1,4 +1,4 @@
 sceneSetups:
-- path: "Assets/Scenes/Bl\xFCtenstra\xDFe - Kopie.unity"
+- path: Assets/Scenes/Garching.unity
   isLoaded: 1
   isActive: 1

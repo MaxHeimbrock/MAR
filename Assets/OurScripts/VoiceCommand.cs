@@ -55,6 +55,9 @@ public class VoiceCommand : MonoBehaviour
         actions.Add("forward", manager.ManualStep);
         actions.Add("next", manager.ManualStep);
 
+        actions.Add("yes", manager.GoToCashier);
+        actions.Add("no", manager.ContinueShopping);
+
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += RecognizeSpeech;
         keywordRecognizer.Start();

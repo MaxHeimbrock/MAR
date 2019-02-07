@@ -71,7 +71,7 @@ public class Dijkstra {
         Vector2 camPos2D = new Vector2(camPos.position.x, camPos.position.z);
         float minDistance = float.MaxValue;
         int closestWaypoint = -1;
-        for (int i = 1; i < allWaypoints.Length; i++)
+        for (int i = 0; i < allWaypoints.Length; i++)
         {
             Vector2 waypointPos2D = new Vector2(allWaypoints[i].transform.position.x, allWaypoints[i].transform.position.z);
             float currentDistance = Vector2.Distance(camPos2D, waypointPos2D);
