@@ -47,7 +47,7 @@ public class Manager : MonoBehaviour
         sendToWatch = GetComponent<SendToWatchTCP>();
 
         // ToDo: Hier auskommentiert zum Debug
-        //sendToWatch.StartConnection();
+        sendToWatch.StartConnection();
 
         voiceCommand = GetComponent<VoiceCommand>();
 
@@ -173,7 +173,9 @@ public class Manager : MonoBehaviour
 
             if (currentProduct != Product.Init)
                 products[(int)currentProduct - 1].GetComponent<AudioSource>().Stop();
-
+            
+            audioSource.clip = whichSectionAudioFile;
+            audioSource.Play(0);
         }
     }
 
@@ -207,7 +209,7 @@ public class Manager : MonoBehaviour
         }
 
         // ToDo: Find right distance
-        if (result < 0.2f)
+        if (result < 0.1f)
         {
             ProductTouched();
         }
@@ -306,9 +308,23 @@ public class Manager : MonoBehaviour
         GoToNextState();
     }
 
-    public void GoToCashier()
+    public void GoToCashierWithYes()
     {
         if (currentState == State.ProductInBasket)
+        {
+            dijkstra.FindPathToGoal(0);
+            GoToNextState();
+        }
+    }
+
+    public void GoToCashier()
+    {
+        if (currentState == State.GoToCashier || 
+            currentState == State.SectionSelection ||
+            currentState == State.PathNavigation ||
+            currentState == State.ProductTracking ||
+            currentState == State.ProductFound ||
+            currentState == State.ProductSelection)
         {
             dijkstra.FindPathToGoal(0);
             GoToNextState();

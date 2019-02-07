@@ -554,7 +554,6 @@ C:\Users\Max\Documents\GitHub\MAR\App\MAR\bin\x86\Debug\BridgeInterface.pdb
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\bin\x86\Debug\UnityEngineDelegates.dll
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\bin\x86\Debug\UnityEngineDelegates.pdb
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\bin\x86\Debug\UnityEngineProxy.pdb
-C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\MAR.csprojAssemblyReference.cache
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\MAR.csproj.CoreCompileInputs.cache
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\MAR.csproj.CopyComplete
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\MAR.exe
@@ -633,3 +632,4 @@ C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\.winmd_cache\$BridgeInte
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\.winmd_cache\$UnityEngineDelegates.winmd_636604606280000000.json
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\.winmd_cache\$UnityPlayer.winmd_636604606300000000.json
 C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\.winmd_cache\$WinRTBridge.winmd_636604606320000000.json
+C:\Users\Max\Documents\GitHub\MAR\App\MAR\obj\x86\Debug\MAR.csprojAssemblyReference.cache
