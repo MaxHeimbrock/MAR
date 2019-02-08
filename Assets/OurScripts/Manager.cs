@@ -147,14 +147,15 @@ public class Manager : MonoBehaviour
             PosterFound();
         }
 
-        currentSection = Section.Init;
-        currentProduct = Product.Init;
-
         handPos = new Vector3(0, 0, 0);
         distanceToProduct = 0.0f;
 
         if (currentProduct != Product.Init)
             products[(int)currentProduct - 1].GetComponent<AudioSource>().Stop();
+
+        currentSection = Section.Init;
+        currentProduct = Product.Init;
+
     }
 
     public void ResetShopping()

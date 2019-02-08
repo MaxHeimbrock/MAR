@@ -598,6 +598,7 @@
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\FastConfigurable\FastConfigurable.cginc" />
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\FastConfigurable\FastConfigurable2Sided.shader" />
     <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFVertexLitCommon.cginc" />
+    <None Include="Assets\StreamingAssets\Vuforia\MAR_Device.xml" />
     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Object_OT.xml" />
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\UnlitNoDepthTest.shader" />
     <None Include="Assets\HoloToolkit\UX\Fonts\LICENSE.txt" />
@@ -618,7 +619,6 @@
     <None Include="Assets\HoloToolkit\MRTKVersion.txt" />
     <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFStandard.shader" />
     <None Include="Assets\HoloToolkit\SpatialUnderstanding\Materials\SpatialMappingSurface.shader" />
-    <None Include="Assets\StreamingAssets\Vuforia\MAR_Device.xml" />
     <None Include="Assets\HoloToolkit\UX\Shaders\Normal-Diffuse.shader" />
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\LambertianConfigurableTransparent.shader" />
     <None Include="Assets\HoloToolkit\UX\Shaders\InvisibleShader.shader" />

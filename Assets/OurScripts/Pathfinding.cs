@@ -55,7 +55,7 @@ public class Pathfinding : MonoBehaviour
 
         Vector2 waypoint2D = new Vector2(allWaypoints[path[activeWaypoint]].transform.position.x, allWaypoints[path[activeWaypoint]].transform.position.z);
 
-        if (Vector2.Distance(camPos2D, waypoint2D) < 0.3)
+        if (Vector2.Distance(camPos2D, waypoint2D) < 0.5)
         {
             WaypointReached();
         }
