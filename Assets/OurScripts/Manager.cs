@@ -22,7 +22,7 @@ public class Manager : MonoBehaviour
 
     // States
     public enum State { FindAnchor, ReadyToStart, SectionSelection, PathNavigation, ProductSelection, ProductTracking, ProductFound, ProductInBasket, GoToCashier, Finished};
-    public enum Section { Init, Dairy = 13, Snacks = 9 }; 
+    public enum Section { Init, Dairy = 15, Snacks = 6 }; 
     public enum Product { Init, Corny, Cookie, MilkBlue, MilkGreen };
     State currentState;
     Section currentSection;
